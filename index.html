@@ -1,0 +1,2100 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Tracky</title>
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Tracky" />
+  <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAFl0lEQVR4nO2dwVEkMQxFzdacZiIggM1o4yAAEuBMHmREFFC1Nw57cFXX1IKm3bYkS5737hS29ObL3Q3TD+fzuQD8xK/ZC4C4IAeIIAeIIAeIIAeIIAeIIAeIIAeIIAeInGYvYA6///w9+iPvbxeLlUTmYfnb5x0etLO2MWvKYSqExHqirCPHFCEk1hAlvRyhnPhOakuyyhHcie9ktCSfHOm0uCaXIpnkSK3FNVkUySGHuhYd7YmwBmeiy6HSEqM2RF6bCnHlGCy9c9FzrbaRiHJ0FzpIibOvfyOcHCs99ci+l0ByZC+lRN59RZHjUAWD1O4o6fY4X450JRsk0X4ny9FeqQW0uCbFxmfK0VigxbS4JngF5siR4nPjQ+RSTJAj+MdlCjFr4v0HxjGrMJ3G/To/enRNjpa93ZsW/xGqRH7JEWrbYWmpgFt+OMmBGe3E8cNjrOzuBC1+ZHrdzJNj+g7zslsZ6/ywlQMzBpnrh6EcmKHCRD+s5MAMRWb5YSIHZqgzxY8JX8GAGX34101fjtsKY8YIt6unHh7KcmCGNZ5+aMqBGT64+eF05sAMXXzqqSbHMv/IugBavdCRg4Hij8NwMR8rmGFHggdvNyTFDGtuVHg8PEbl4KgRmcHuGI4VYsMHuzoPycFACYLRcOHrrUGkXw5iIxQW4aGfHJgxC/XKd8rBRUou+vql/NYEh9h4eXl5enqy/i0WfH5+Pj4+mv6K97fL5AdvxEZGOrqmeebgtBEBxS4cloPYyMvR3qklB7ERB61eHJOD2MjOoQ5yhxREdORgpkRDpSMH5GCmrEF7HxWSg9iIyXhfOHOASKsczJSVaOzmaHIwUyIz2J3Wr32SXMsox+l0+vj4OPpTz8/Pr6+vFusxZaRxnDlApEkODhzr0dLToeTIOFPujZEeMVZABDlAZF8ODhyrstvZ/uTgwJGF7k4xVkAEOUAEOUAEOUAEOUBkR46VnrfdM1K/bl/NkhwgghwgghwgghwgghwgghwgghwgghwgghwgghwgghwgghwgghwgghwgghwgghwgsiNH3x+JQDT6/miL5AAR5AAR5AAR5AAR5AARk3e8QSgM3/HGv6isym5nGSsgghwgYvVGagiC+RupOXasB19SC0MgB4iMysGxIzKD3WmVg2PHSjR2k7ECIgpyMFliMt6XA3IwWdagvY86Y4XwiIZKRzhzgMgxOZgs2TnUQbXkYLLEQasXh+UgPPJytHeaZw7CIwKKXTh1/Mz72yW1B19fX5fL3eVfR+QrX62klmYBdOvfKQcnj1z09Uv/PgfhMQv1ypu84w0//LlRc97xBvpYvZGa8PDEIjaKaXLghw92dR6Vg8uWyAx2RyE5GC4TMRooFfMDKX7YYV1bHTluS4ofFtyuqsq4V0sODh9x0OqF030OwkMXn3pqysFw8cFhoFSUkwM/rHEzo1iMFfyww9OMMuXZCn704V83Ezl2FcaPo+xWzOJq0So58EORKWYU07GCHyrMMqNYnznwY5CJZhSHAyl+dDPXjFLKw/l8Nv0FlRYDuAG/EaRcTpeyLTshQipBzCie9znwo4U4ZhS3sbLR2P47HDEBK+N9h7Rxb/cWIQHNKP7JUWnv/fIRErkUc+SoxPy4eBK8AjPlKLE/N6ak2PhkOcrB48UCiiTa73w5KolK1k26PUaRo3RdoUSo4C559xVIjkreUn4n+17CyVEGbnIEqWz29W9ElKMyeB/MudC5VttIXDkqKrdKjUofeW0qRJejon43vaMlEdbgTA45Kss8cImvRSWTHJXUimTRopJPjko6RXJpUckqx0ZwSzI6sZFejo1QlqR2YmMdOa6ZIsoaQlyzphzXmIqynhDXrC/Hj2R/6uHDncoBLfD11iCCHCCCHCCCHCCCHCCCHCCCHCCCHCDyDx1EOpesxie4AAAAAElFTkSuQmCC" />
+  <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAFl0lEQVR4nO2dwVEkMQxFzdacZiIggM1o4yAAEuBMHmREFFC1Nw57cFXX1IKm3bYkS5737hS29ObL3Q3TD+fzuQD8xK/ZC4C4IAeIIAeIIAeIIAeIIAeIIAeIIAeIIAeInGYvYA6///w9+iPvbxeLlUTmYfnb5x0etLO2MWvKYSqExHqirCPHFCEk1hAlvRyhnPhOakuyyhHcie9ktCSfHOm0uCaXIpnkSK3FNVkUySGHuhYd7YmwBmeiy6HSEqM2RF6bCnHlGCy9c9FzrbaRiHJ0FzpIibOvfyOcHCs99ci+l0ByZC+lRN59RZHjUAWD1O4o6fY4X450JRsk0X4ny9FeqQW0uCbFxmfK0VigxbS4JngF5siR4nPjQ+RSTJAj+MdlCjFr4v0HxjGrMJ3G/To/enRNjpa93ZsW/xGqRH7JEWrbYWmpgFt+OMmBGe3E8cNjrOzuBC1+ZHrdzJNj+g7zslsZ6/ywlQMzBpnrh6EcmKHCRD+s5MAMRWb5YSIHZqgzxY8JX8GAGX34101fjtsKY8YIt6unHh7KcmCGNZ5+aMqBGT64+eF05sAMXXzqqSbHMv/IugBavdCRg4Hij8NwMR8rmGFHggdvNyTFDGtuVHg8PEbl4KgRmcHuGI4VYsMHuzoPycFACYLRcOHrrUGkXw5iIxQW4aGfHJgxC/XKd8rBRUou+vql/NYEh9h4eXl5enqy/i0WfH5+Pj4+mv6K97fL5AdvxEZGOrqmeebgtBEBxS4cloPYyMvR3qklB7ERB61eHJOD2MjOoQ5yhxREdORgpkRDpSMH5GCmrEF7HxWSg9iIyXhfOHOASKsczJSVaOzmaHIwUyIz2J3Wr32SXMsox+l0+vj4OPpTz8/Pr6+vFusxZaRxnDlApEkODhzr0dLToeTIOFPujZEeMVZABDlAZF8ODhyrstvZ/uTgwJGF7k4xVkAEOUAEOUAEOUAEOUBkR46VnrfdM1K/bl/NkhwgghwgghwgghwgghwgghwgghwgghwgghwgghwgghwgghwgghwgghwgghwgghwgsiNH3x+JQDT6/miL5AAR5AAR5AAR5AAR5AARk3e8QSgM3/HGv6isym5nGSsgghwgYvVGagiC+RupOXasB19SC0MgB4iMysGxIzKD3WmVg2PHSjR2k7ECIgpyMFliMt6XA3IwWdagvY86Y4XwiIZKRzhzgMgxOZgs2TnUQbXkYLLEQasXh+UgPPJytHeaZw7CIwKKXTh1/Mz72yW1B19fX5fL3eVfR+QrX62klmYBdOvfKQcnj1z09Uv/PgfhMQv1ypu84w0//LlRc97xBvpYvZGa8PDEIjaKaXLghw92dR6Vg8uWyAx2RyE5GC4TMRooFfMDKX7YYV1bHTluS4ofFtyuqsq4V0sODh9x0OqF030OwkMXn3pqysFw8cFhoFSUkwM/rHEzo1iMFfyww9OMMuXZCn704V83Ezl2FcaPo+xWzOJq0So58EORKWYU07GCHyrMMqNYnznwY5CJZhSHAyl+dDPXjFLKw/l8Nv0FlRYDuAG/EaRcTpeyLTshQipBzCie9znwo4U4ZhS3sbLR2P47HDEBK+N9h7Rxb/cWIQHNKP7JUWnv/fIRErkUc+SoxPy4eBK8AjPlKLE/N6ak2PhkOcrB48UCiiTa73w5KolK1k26PUaRo3RdoUSo4C559xVIjkreUn4n+17CyVEGbnIEqWz29W9ElKMyeB/MudC5VttIXDkqKrdKjUofeW0qRJejon43vaMlEdbgTA45Kss8cImvRSWTHJXUimTRopJPjko6RXJpUckqx0ZwSzI6sZFejo1QlqR2YmMdOa6ZIsoaQlyzphzXmIqynhDXrC/Hj2R/6uHDncoBLfD11iCCHCCCHCCCHCCCHCCCHCCCHCCCHCDyDx1EOpesxie4AAAAAElFTkSuQmCC" />
+  <style>
+    html, body { margin: 0; padding: 0; background: #0A0A0A; }
+    #status { color: #8F8F8F; font-family: sans-serif; padding: 24px; font-size: 14px; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <div id="root"><div id="status">Lade Tracky…</div></div>
+
+  <script>
+    // Zeigt Fehler direkt auf dem Bildschirm statt einer leeren Seite (hilft beim Debuggen per Screenshot)
+    window.addEventListener("error", function (e) {
+      var s = document.getElementById("status");
+      if (s) s.textContent = "Fehler beim Start:\n" + (e.message || e.error || "unbekannt");
+    });
+    setTimeout(function () {
+      var s = document.getElementById("status");
+      if (s && s.textContent.indexOf("Lade") === 0) s.textContent = "Die App konnte nicht starten. Internetverbindung prüfen und Seite neu laden.";
+    }, 10000);
+
+    // IndexedDB-Speicher mit derselben get/set-Schnittstelle wie zuvor im Chat-Artefakt
+    (function () {
+      var DB_NAME = "tracky-storage", STORE = "kv";
+      function openDB() {
+        return new Promise(function (resolve, reject) {
+          var req = indexedDB.open(DB_NAME, 1);
+          req.onupgradeneeded = function () { req.result.createObjectStore(STORE); };
+          req.onsuccess = function () { resolve(req.result); };
+          req.onerror = function () { reject(req.error); };
+        });
+      }
+      window.storage = {
+        get: function (key) {
+          return openDB().then(function (db) {
+            return new Promise(function (resolve, reject) {
+              var req = db.transaction(STORE, "readonly").objectStore(STORE).get(key);
+              req.onsuccess = function () { resolve(req.result !== undefined ? { key: key, value: req.result, shared: false } : null); };
+              req.onerror = function () { reject(req.error); };
+            });
+          });
+        },
+        set: function (key, value) {
+          return openDB().then(function (db) {
+            return new Promise(function (resolve, reject) {
+              var tx = db.transaction(STORE, "readwrite");
+              tx.objectStore(STORE).put(value, key);
+              tx.oncomplete = function () { resolve({ key: key, value: value, shared: false }); };
+              tx.onerror = function () { reject(tx.error); };
+            });
+          });
+        }
+      };
+    })();
+  </script>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone@7.25.6/babel.min.js" crossorigin></script>
+
+  <script type="text/babel" data-presets="react">
+const { useState, useEffect, useMemo } = React;
+
+// Eigene, abhängigkeitsfreie Icon-Komponenten (ersetzen lucide-react im Standalone-Build) –
+// einfache SVG-Glyphen, respektieren size/color wie die ursprünglichen Icons.
+function makeIcon(paths, viewBox = "0 0 24 24") {
+  return function Icon({ size = 16, color = "currentColor", style }) {
+    return (
+      <svg width={size} height={size} viewBox={viewBox} fill="none" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={style}>
+        {paths}
+      </svg>
+    );
+  };
+}
+const Dumbbell = makeIcon(<><path d="M4 9v6M2 10v4" /><path d="M20 9v6M22 10v4" /><path d="M7 8v8M17 8v8" /><path d="M7 12h10" /></>);
+const Footprints = makeIcon(<><ellipse cx="8" cy="9" rx="2.5" ry="3.5" /><ellipse cx="16" cy="16" rx="2.5" ry="3.5" /><line x1="8" y1="13" x2="8" y2="15" /><line x1="16" y1="11" x2="16" y2="9" /></>);
+const Waves = makeIcon(<><path d="M2 8c1.5-2 4.5-2 6 0s4.5 2 6 0 4.5-2 6 0" /><path d="M2 14c1.5-2 4.5-2 6 0s4.5 2 6 0 4.5-2 6 0" /><path d="M2 20c1.5-2 4.5-2 6 0s4.5 2 6 0 4.5-2 6 0" /></>);
+const Scale = makeIcon(<><line x1="12" y1="3" x2="12" y2="21" /><path d="M5 7h14" /><path d="M5 7 2 13a3 3 0 0 0 6 0z" /><path d="M19 7l-3 6a3 3 0 0 0 6 0z" /></>);
+const Trophy = makeIcon(<><path d="M7 4h10v6a5 5 0 0 1-10 0z" /><path d="M7 5H4a3 3 0 0 0 3 5M17 5h3a3 3 0 0 1-3 5" /><line x1="12" y1="15" x2="12" y2="19" /><line x1="8" y1="21" x2="16" y2="21" /></>);
+const Trash2 = makeIcon(<><line x1="4" y1="6" x2="20" y2="6" /><path d="M6 6V4h12v2M8 6v14h8V6" /><line x1="10" y1="10" x2="10" y2="17" /><line x1="14" y1="10" x2="14" y2="17" /></>);
+const Plus = makeIcon(<><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></>);
+const Pencil = makeIcon(<><path d="M3 21l1.5-5L16 4.5 19.5 8 8 19.5z" /><line x1="14" y1="6.5" x2="17.5" y2="10" /></>);
+const X = makeIcon(<><line x1="5" y1="5" x2="19" y2="19" /><line x1="19" y1="5" x2="5" y2="19" /></>);
+const Settings2 = makeIcon(<><line x1="4" y1="7" x2="20" y2="7" /><circle cx="9" cy="7" r="2" fill="currentColor" /><line x1="4" y1="17" x2="20" y2="17" /><circle cx="15" cy="17" r="2" fill="currentColor" /></>);
+const TrendingUp = makeIcon(<><polyline points="3,17 9,11 13,15 21,6" /><polyline points="15,6 21,6 21,12" /></>);
+const Flame = makeIcon(<path d="M12 2c2 3-1 4-1 7a3 3 0 1 0 6 0c0-1-0.5-2-1-2 1 4-1 6-4 6a5 5 0 0 1-5-5c0-4 3-4 5-6z" />);
+const ListChecks = makeIcon(<><polyline points="3,6 4.5,7.5 7,5" /><line x1="10" y1="6" x2="21" y2="6" /><polyline points="3,12 4.5,13.5 7,11" /><line x1="10" y1="12" x2="21" y2="12" /><polyline points="3,18 4.5,19.5 7,17" /><line x1="10" y1="18" x2="21" y2="18" /></>);
+const Download = makeIcon(<><path d="M12 3v12" /><polyline points="7,10 12,15 17,10" /><line x1="4" y1="20" x2="20" y2="20" /></>);
+const Upload = makeIcon(<><path d="M12 15V3" /><polyline points="7,8 12,3 17,8" /><line x1="4" y1="20" x2="20" y2="20" /></>);
+const Music = makeIcon(<><circle cx="7" cy="18" r="2.5" /><circle cx="17" cy="16" r="2.5" /><line x1="9.5" y1="18" x2="9.5" y2="5" /><line x1="19.5" y1="16" x2="19.5" y2="3" /><line x1="9.5" y1="5" x2="19.5" y2="3" /></>);
+const Check = makeIcon(<polyline points="4,13 9,18 20,6" />);
+const Camera = makeIcon(<><path d="M4 8h3l2-3h6l2 3h3v12H4z" /><circle cx="12" cy="14" r="3.5" /></>);
+const Apple = makeIcon(<><path d="M12 8c-3.5-2-7.5 0-7.5 5.5S8 21 12 19c4 2 7.5-2 7.5-5.5S15.5 6 12 8z" /><path d="M12 8c0-2 1-3.5 2.5-4" /></>);
+const Sparkles = makeIcon(<><path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5z" /><path d="M19 15l0.7 2 2 0.7-2 0.7-0.7 2-0.7-2-2-0.7 2-0.7z" /></>);
+const Loader2 = makeIcon(<path d="M12 3a9 9 0 1 0 9 9" />);
+
+// Lucide hat keinen Padel-Schläger im Set – eigenes kleines Icon dafür
+function PadelIcon({ size = 18, color = "currentColor", style }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={style}>
+      <ellipse cx="10" cy="9" rx="6.5" ry="7.5" />
+      <circle cx="10" cy="6" r="0.6" fill={color} stroke="none" />
+      <circle cx="7" cy="9.5" r="0.6" fill={color} stroke="none" />
+      <circle cx="13" cy="9.5" r="0.6" fill={color} stroke="none" />
+      <circle cx="10" cy="12.5" r="0.6" fill={color} stroke="none" />
+      <line x1="10" y1="16.5" x2="10" y2="22" />
+    </svg>
+  );
+}
+
+// ---------- design tokens (Schwarz/Weiß + knalliges Dunkelblau) ----------
+const C = {
+  bg: "#0A0A0A",
+  surface: "#161616",
+  surface2: "#202020",
+  border: "#2E2E2E",
+  text: "#FFFFFF",
+  muted: "#8F8F8F",
+  signal: "#2F5EFF",
+  red: "#E8352E",
+  green: "#2E9E5B",
+  yellow: "#F2B705",
+};
+
+const DISCIPLINES = {
+  gym: { label: "Gym", color: "#2F5EFF", icon: Dumbbell },
+  run: { label: "Laufen", color: "#7B93FF", icon: Footprints },
+  swim: { label: "Schwimmen", color: "#00B8D9", icon: Waves },
+  padel: { label: "Padel", color: "#E8E8E8", icon: PadelIcon },
+};
+
+const SWIM_TECHNIQUES = { kraul: "Kraul", brust: "Brust", ruecken: "Rücken", schmetterling: "Schmetterling", lagen: "Lagen" };
+const SWIM_EQUIPMENT = ["Flossen", "Pull Buoy", "Paddles", "Brett", "Schnorchel"];
+
+const MUSCLE_GROUPS = ["Brust", "Rücken", "Schulter", "Bizeps", "Trizeps", "Beine", "Bauch"];
+const FEELING_LABELS = { 1: "Schlecht", 2: "Mäßig", 3: "Geht so", 4: "Gut", 5: "Super" };
+// Grobe Faustregel je Muskelgruppe: große, verbundgelenkdominierte Gruppen eher 6-8,
+// kleinere/isolationslastige Gruppen eher 8-10/8-12 (z.B. Seitheben, Butterfly, Curls)
+const REP_DEFAULTS = {
+  Brust: [6, 8], Rücken: [6, 8], Beine: [6, 8],
+  Schulter: [8, 10], Bizeps: [8, 10], Trizeps: [8, 10],
+  Bauch: [8, 12],
+};
+
+// Startbibliothek, damit nicht jedes Mal neu angelegt werden muss (v.a. solange die
+// Speicherfunktion instabil ist). Wird nur verwendet, wenn noch keine eigene Bibliothek existiert.
+const SEED_EXERCISES = [
+  ["Schrägbankdrücken Maschine", "Brust"],
+  ["Überzüge Kabel", "Rücken"],
+  ["Butterfly", "Brust", 8, 10],
+  ["Latzug", "Rücken"],
+  ["Rudern eng", "Rücken"],
+  ["High Row", "Rücken"],
+  ["Dips", "Brust"],
+  ["Seitheben Kurzhantel", "Schulter"],
+  ["Reverse Butterfly", "Schulter"],
+  ["Facepull", "Schulter"],
+  ["Seitheben Maschine", "Schulter"],
+  ["Seitheben Kabel", "Schulter"],
+  ["Schulterdrücken", "Schulter"],
+  ["Beinbeuger sitzend", "Beine"],
+  ["Beinstrecker sitzend", "Beine"],
+  ["Beinpresse", "Beine"],
+  ["Wadenheben sitzend", "Beine"],
+  ["Hammercurls", "Bizeps"],
+  ["Trizeps Extension V", "Trizeps"],
+  ["Trizeps Überkopf", "Trizeps"],
+  ["Preachercurls", "Bizeps"],
+].map(([name, muscleGroup, low, high]) => ({
+  name, muscleGroup,
+  repLow: low || REP_DEFAULTS[muscleGroup][0],
+  repHigh: high || REP_DEFAULTS[muscleGroup][1],
+}));
+
+const todayISO = () => new Date().toISOString().slice(0, 10);
+const fmtDate = (iso) => {
+  const d = new Date(iso + "T00:00:00");
+  return `${String(d.getDate()).padStart(2, "0")}.${String(d.getMonth() + 1).padStart(2, "0")}.${d.getFullYear()}`;
+};
+const startOfWeek = (d) => {
+  const date = new Date(d);
+  const day = (date.getDay() + 6) % 7;
+  date.setDate(date.getDate() - day);
+  date.setHours(0, 0, 0, 0);
+  return date;
+};
+const weekKey = (d) => startOfWeek(d).toISOString().slice(0, 10);
+const weekLabel = (d) => `${d.getDate()}.${d.getMonth() + 1}.`;
+const scoreColor = (score) => (score == null ? C.muted : score >= 4 ? C.green : score >= 3 ? C.yellow : C.red);
+const calcScore = (feeling, focus, sleep) => {
+  const vals = [feeling, focus, sleep].filter((v) => v != null && v !== "");
+  if (!vals.length) return null;
+  return vals.reduce((a, b) => a + Number(b), 0) / vals.length;
+};
+const getExRange = (library, name) => {
+  const item = library.find((l) => l.name === name);
+  return { repLow: item?.repLow || 6, repHigh: item?.repHigh || 8 };
+};
+
+// ---------- Trainingsplan-Engine (grobe, transparente Faustregeln) ----------
+const PHASE_LABELS = { base: "Grundlage", build: "Aufbau", peak: "Spitze", taper: "Taper" };
+const RUN_TYPE_LABELS = { grundlage: "Grundlagenlauf", tempo: "Tempo/Schwelle", intervalle: "Intervalle", regeneration: "Regeneration" };
+const SWIM_TYPE_LABELS = { ausdauer: "Ausdauer", technik: "Technik/Drills", tempo: "Tempo" };
+const RUN_ZONE = { grundlage: 2, tempo: 3, intervalle: 4, regeneration: 1 };
+const SWIM_ZONE = { ausdauer: 2, technik: 1, tempo: 3 };
+
+const getPhase = (goal) => {
+  if (!goal?.date) return null;
+  const weeksLeft = Math.ceil((new Date(goal.date + "T00:00:00") - new Date(todayISO() + "T00:00:00")) / (7 * 86400000));
+  if (weeksLeft <= 0) return null;
+  if (weeksLeft <= 2) return "taper";
+  if (weeksLeft <= 4) return "peak";
+  if (weeksLeft <= 12) return "build";
+  return "base";
+};
+
+// Empfiehlt die heutige Laufeinheit: berücksichtigt Phase, hart/leicht-Rhythmus und
+// die 10%-Regel fürs Wochenvolumen. Bewusst als transparente Faustregel, kein Blackbox-Algorithmus.
+function getRunRecommendation(entries, goal) {
+  const phase = getPhase(goal) || "base";
+  const runs = entries.filter((e) => e.discipline === "run").sort((a, b) => a.date.localeCompare(b.date));
+  const weekNow = weekKey(startOfWeek(new Date()));
+  const thisWeek = runs.filter((e) => weekKey(new Date(e.date)) === weekNow);
+  const lastRun = runs[runs.length - 1];
+  const lastWasHard = lastRun && (lastRun.trainingType === "tempo" || lastRun.trainingType === "intervalle");
+
+  const prevWeekKey = weekKey(new Date(startOfWeek(new Date()).getTime() - 7 * 86400000));
+  const prevWeekVolume = runs.filter((e) => weekKey(new Date(e.date)) === prevWeekKey).reduce((s, e) => s + e.duration, 0);
+
+  let type;
+  if (thisWeek.length === 0) type = phase === "taper" ? "regeneration" : lastWasHard ? "grundlage" : (phase === "build" || phase === "peak") ? "tempo" : "grundlage";
+  else if (thisWeek.length === 1) type = lastWasHard || phase === "taper" ? "grundlage" : phase === "peak" ? "intervalle" : "tempo";
+  else type = phase === "taper" ? "regeneration" : "grundlage"; // 3. Einheit: eher der lange, ruhige Lauf
+
+  const weekTarget = prevWeekVolume > 0 ? prevWeekVolume * (phase === "taper" ? 0.6 : 1.1) : 90;
+  const thisWeekVolume = thisWeek.reduce((s, e) => s + e.duration, 0);
+  const remainingSessions = Math.max(1, 3 - thisWeek.length);
+  const targetDuration = Math.max(20, Math.min(150, Math.round(Math.max(20, weekTarget - thisWeekVolume) / remainingSessions)));
+
+  return { phase, type, hrZone: RUN_ZONE[type], targetDuration };
+}
+
+const round05 = (x) => Math.round(x * 20) / 20;
+
+// Schwimmen: fixe 1x/Woche, rotiert durch Ausdauer/Technik/Tempo, Taper geht auf Technik zurück.
+// Gibt jetzt konkrete Segmente vor: welche Technik, wie viele km, locker oder zügig.
+function getSwimRecommendation(entries, goal) {
+  const phase = getPhase(goal) || "base";
+  const swims = entries.filter((e) => e.discipline === "swim").sort((a, b) => a.date.localeCompare(b.date));
+  const rotation = ["ausdauer", "technik", "tempo"];
+  const type = phase === "taper" ? "technik" : rotation[swims.length % rotation.length];
+  const last = swims[swims.length - 1];
+
+  let totalDistance = last?.distance ? last.distance * (phase === "taper" ? 0.8 : 1.05) : 1;
+  if (type === "technik") totalDistance *= 0.7;
+  totalDistance = round05(totalDistance);
+
+  let segments;
+  if (type === "ausdauer") {
+    segments = [
+      { technique: "kraul", distance: round05(totalDistance * 0.8), intensity: "locker" },
+      { technique: "brust", distance: round05(totalDistance * 0.2), intensity: "locker" },
+    ];
+  } else if (type === "technik") {
+    segments = [
+      { technique: "kraul", distance: round05(totalDistance * 0.5), intensity: "locker" },
+      { technique: "brust", distance: round05(totalDistance * 0.5), intensity: "locker" },
+    ];
+  } else {
+    segments = [
+      { technique: "kraul", distance: round05(totalDistance * 0.2), intensity: "locker" },
+      { technique: "kraul", distance: round05(totalDistance * 0.6), intensity: "zügig" },
+      { technique: "brust", distance: round05(totalDistance * 0.2), intensity: "locker" },
+    ];
+  }
+
+  const paces = swims.filter((e) => e.distance).map((e) => e.duration / (e.distance * 10));
+  const avgPace100 = paces.length ? paces.reduce((a, b) => a + b, 0) / paces.length : 2.3;
+  const segmentsTotal = segments.reduce((s, x) => s + x.distance, 0);
+  const targetDuration = Math.round(segmentsTotal * 10 * avgPace100);
+
+  return { phase, type, hrZone: SWIM_ZONE[type], segments, totalDistance: segmentsTotal, targetDuration };
+}
+
+// Schwimmen wird traditionell in Pace/100m gemessen, Laufen in Pace/km
+const paceLabel = (discipline, distance, duration) => {
+  if (discipline === "swim") return `${(duration / (distance * 10)).toFixed(1)} min/100m`;
+  return `${(duration / distance).toFixed(1)} min/km`;
+};
+
+// ---------- Ernährungs-Engine (grobe, transparente Faustregeln – kein medizinischer Rat) ----------
+const NUTRITION_GOALS = { aufbau: "Muskelaufbau", definition: "Definition", erhalt: "Erhalt" };
+// "Regenbogen"-Farbgruppen als praktikabler Mikronährstoff-/Antioxidantien-Proxy statt exakter µg-Werte
+const COLOR_TAGS = ["Grün", "Rot", "Orange/Gelb", "Blau/Violett", "Weiß/Braun"];
+const MEAL_TYPES = { fruehstueck: "Frühstück", mittag: "Mittag", abend: "Abend", snack: "Snack" };
+
+const getLastWeekTrainingHours = (entries) => {
+  const wk = weekKey(new Date(startOfWeek(new Date()).getTime() - 7 * 86400000));
+  return entries.filter((e) => weekKey(new Date(e.date)) === wk).reduce((s, e) => s + (Number(e.duration) || 0), 0) / 60;
+};
+
+// Grobe TDEE-Schätzung über kcal/kg-Faustregel, skaliert mit Trainingsstunden der Vorwoche
+function estimateTDEE(weightKg, weeklyHours) {
+  const factor = weeklyHours < 3 ? 28 : weeklyHours < 6 ? 32 : weeklyHours < 10 ? 36 : 40;
+  return Math.round(weightKg * factor);
+}
+
+function computeMacroTargets(weightKg, weeklyHours, goalType, calorieAdjustment = 0) {
+  const goalOffsets = { aufbau: 300, definition: -400, erhalt: 0 };
+  const calories = Math.max(1200, estimateTDEE(weightKg, weeklyHours) + (goalOffsets[goalType] || 0) + calorieAdjustment);
+  const proteinPerKg = goalType === "definition" ? 2.2 : goalType === "aufbau" ? 1.9 : 1.8;
+  const protein = Math.round(weightKg * proteinPerKg);
+  const fat = Math.round((calories * 0.25) / 9);
+  const carbs = Math.max(0, Math.round((calories - protein * 4 - fat * 9) / 4));
+  const fiber = Math.round((calories / 1000) * 14);
+  return { calories: Math.round(calories), protein, carbs, fat, fiber };
+}
+
+// Wöchentliche Anpassung: vergleicht den tatsächlichen Gewichtstrend der letzten 7 Tage mit dem
+// fürs Ziel erwarteten Trend und korrigiert die Kalorien leicht. Ergänzt einen Hinweis, falls die
+// Session-Qualität der letzten Woche (Gefühl/Fokus) niedrig war – als Denkanstoß, nicht als Formel-Input.
+function getWeeklyAdjustment(bodyStats, entries, goalType) {
+  const sorted = [...bodyStats].sort((a, b) => a.date.localeCompare(b.date));
+  const now = new Date();
+  const weekAgo = new Date(now - 7 * 86400000);
+  const twoWeeksAgo = new Date(now - 14 * 86400000);
+  const recent = sorted.filter((b) => new Date(b.date + "T00:00:00") >= weekAgo);
+  const prior = sorted.filter((b) => { const d = new Date(b.date + "T00:00:00"); return d >= twoWeeksAgo && d < weekAgo; });
+  let adjustment = 0;
+  let note = null;
+  if (recent.length && prior.length) {
+    const avg = (arr) => arr.reduce((s, b) => s + b.weight, 0) / arr.length;
+    const change = avg(recent) - avg(prior);
+    const expected = { aufbau: 0.15, definition: -0.5, erhalt: 0 }[goalType];
+    const diff = change - expected;
+    if (diff < -0.15) { adjustment = 150; note = `Gewichtstrend (${change.toFixed(1)}kg/Wo.) schwächer als fürs Ziel erwartet → Kalorien leicht erhöht.`; }
+    else if (diff > 0.15) { adjustment = -150; note = `Gewichtstrend (${change.toFixed(1)}kg/Wo.) stärker als fürs Ziel erwartet → Kalorien leicht gesenkt.`; }
+  } else {
+    note = "Noch zu wenig Gewichtsdaten (mind. 2 Wochen) für eine automatische Anpassung.";
+  }
+  const weekNow = weekKey(startOfWeek(new Date()));
+  const lastWeekEntries = entries.filter((e) => weekKey(new Date(e.date)) === weekKey(new Date(startOfWeek(new Date()).getTime() - 7 * 86400000)));
+  const scores = lastWeekEntries.map((e) => e.sessionScore).filter((s) => s != null);
+  if (scores.length) {
+    const avgScore = scores.reduce((a, b) => a + b, 0) / scores.length;
+    if (avgScore < 3 && goalType === "definition") note = `${note ? note + " " : ""}Ø Session-Score letzte Woche war niedrig (${avgScore.toFixed(1)}/5) bei einem Kaloriendefizit – ggf. ist das Defizit aktuell zu groß.`;
+  }
+  return { adjustment, note };
+}
+
+// Im Standalone-Build (GitHub Pages) gibt es keinen eingebetteten Anthropic-API-Zugang mehr wie
+// im Chat-Artefakt – ein echter API-Key dürfte aus Sicherheitsgründen nicht im Frontend stehen.
+// Foto-Schätzung/Rezeptvorschlag brauchen dafür einen eigenen kleinen Server (wie bei Strava
+// besprochen). Bis dahin schlägt der Aufruf bewusst mit einer klaren Meldung fehl, statt
+// stillschweigend nichts zu tun.
+async function callClaudeJSON(promptText, imageBase64) {
+  throw new Error("In dieser Version (GitHub Pages) noch nicht verfügbar – braucht einen eigenen Server für den API-Zugang.");
+  // Referenzcode für später, sobald ein eigener Server/Proxy existiert:
+  const content = [];
+  if (imageBase64) content.push({ type: "image", source: { type: "base64", media_type: "image/jpeg", data: imageBase64 } });
+  content.push({ type: "text", text: promptText });
+  const response = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ model: "claude-sonnet-4-6", max_tokens: 1000, messages: [{ role: "user", content }] }),
+  });
+  const data = await response.json();
+  const text = (data.content || []).map((b) => b.text || "").join("");
+  const clean = text.replace(/```json|```/g, "").trim();
+  return JSON.parse(clean);
+}
+
+async function loadKey(key, fallback) {
+  try {
+    const res = await window.storage.get(key, false);
+    return res ? JSON.parse(res.value) : fallback;
+  } catch {
+    return fallback;
+  }
+}
+async function saveKey(key, value) {
+  try {
+    await window.storage.set(key, JSON.stringify(value), false);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+// Gezielter Selbsttest: schreibt einen Testwert und liest ihn direkt wieder – anders als bei
+// normalen loadKey-Aufrufen (wo "Key existiert noch nicht" völlig normal ist) zeigt das
+// zuverlässig, ob Speichern/Lesen hier tatsächlich funktioniert.
+async function testStoragePersistence() {
+  const testKey = "__storage_healthcheck__";
+  const marker = String(Date.now());
+  try {
+    await window.storage.set(testKey, marker, false);
+  } catch (e) {
+    return { ok: false, stage: "Schreiben", error: String(e?.message || e) };
+  }
+  try {
+    const res = await window.storage.get(testKey, false);
+    if (res && res.value === marker) return { ok: true };
+    return { ok: false, stage: "Lesen", error: "Gelesener Wert stimmt nicht mit dem gespeicherten überein." };
+  } catch (e) {
+    return { ok: false, stage: "Lesen", error: String(e?.message || e) };
+  }
+}
+
+// ---------- font / base styles ----------
+const GlobalStyle = () => (
+  <style>{`
+    @import url('https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap');
+    .ft-root { font-family: 'Work Sans', sans-serif; background: ${C.bg}; color: ${C.text}; min-height: 100vh; }
+    .ft-display { font-family: 'Anton', sans-serif; text-transform: uppercase; letter-spacing: 0.01em; }
+    .ft-mono { font-family: 'IBM Plex Mono', monospace; }
+    .ft-input {
+      background: ${C.surface2}; border: 1px solid ${C.border}; color: ${C.text};
+      border-radius: 10px; padding: 11px 12px; font-family: 'Work Sans', sans-serif; font-size: 15px;
+      width: 100%; box-sizing: border-box;
+    }
+    .ft-input:focus { outline: 2px solid ${C.signal}; outline-offset: 1px; }
+    .ft-btn {
+      background: ${C.signal}; color: #1A1A1A; border: none; border-radius: 8px;
+      padding: 12px 16px; font-weight: 700; font-size: 14px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .ft-btn:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+    .ft-btn-ghost {
+      background: transparent; color: ${C.muted}; border: 1px solid ${C.border}; border-radius: 8px;
+      padding: 10px 14px; font-weight: 600; font-size: 13px; cursor: pointer;
+    }
+    .ft-btn-ghost:focus-visible, .ft-tab:focus-visible { outline: 2px solid ${C.signal}; outline-offset: 2px; }
+    .ft-card { background: ${C.surface}; border: 1px solid ${C.border}; border-radius: 12px; padding: 16px; }
+    .ft-tab {
+      display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 10px 6px;
+      border-radius: 10px; cursor: pointer; border: 1px solid transparent; background: transparent;
+      color: ${C.muted}; font-size: 11px; font-weight: 600; flex: 1; min-width: 0;
+    }
+    .ft-tab.active { background: ${C.surface2}; color: ${C.text}; border-color: ${C.border}; }
+    .ft-pill {
+      background: ${C.surface2}; border: 1px solid ${C.border}; color: ${C.muted}; border-radius: 8px;
+      padding: 8px 0; font-size: 13px; font-weight: 700; cursor: pointer; flex: 1; text-align: center;
+    }
+    .ft-pill.active { background: ${C.signal}; color: #1A1A1A; border-color: ${C.signal}; }
+    @media (prefers-reduced-motion: no-preference) {
+      .ft-fade { animation: ftFade 0.25s ease-out; }
+      @keyframes ftFade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+    }
+  `}</style>
+);
+
+// ---------- ticker (signature element) ----------
+// ---------- eigene, abhängigkeitsfreie Charts (ersetzen recharts für den Standalone-Build) ----------
+function StackedBarChart({ data, series, height = 160 }) {
+  const W = 300, H = height, padBottom = 16, padTop = 4;
+  const max = Math.max(1, ...data.map((d) => series.reduce((s, sr) => s + (Number(d[sr.key]) || 0), 0)));
+  const n = data.length || 1;
+  const gap = 4;
+  const barW = (W - gap * (n + 1)) / n;
+  return (
+    <div>
+      <svg viewBox={`0 0 ${W} ${H}`} style={{ width: "100%", height: "auto", display: "block" }}>
+        <line x1="0" y1={H - padBottom} x2={W} y2={H - padBottom} stroke={C.border} strokeWidth="1" />
+        {data.map((d, i) => {
+          const x = gap + i * (barW + gap);
+          let y = H - padBottom;
+          return (
+            <g key={i}>
+              {series.map((sr) => {
+                const v = Number(d[sr.key]) || 0;
+                if (!v) return null;
+                const h = (v / max) * (H - padBottom - padTop);
+                y -= h;
+                return <rect key={sr.key} x={x} y={y} width={barW} height={h} fill={sr.color} rx="1.5" />;
+              })}
+              <text x={x + barW / 2} y={H - 4} fontSize="7" fill={C.muted} textAnchor="middle">{d.label}</text>
+            </g>
+          );
+        })}
+      </svg>
+      <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 8 }}>
+        {series.map((sr) => (
+          <span key={sr.key} style={{ fontSize: 10, color: C.muted, display: "flex", alignItems: "center", gap: 4 }}>
+            <span style={{ width: 8, height: 8, borderRadius: 2, background: sr.color, display: "inline-block" }} /> {sr.label}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function HBarChart({ data, color, unit = "" }) {
+  const W = 300, rowH = 22, padLeft = 74;
+  const H = Math.max(1, data.length) * rowH + 8;
+  const max = Math.max(1, ...data.map((d) => Number(d.value) || 0));
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} style={{ width: "100%", height: "auto", display: "block" }}>
+      {data.map((d, i) => {
+        const w = ((Number(d.value) || 0) / max) * (W - padLeft - 30);
+        const y = i * rowH + 6;
+        return (
+          <g key={i}>
+            <text x={padLeft - 6} y={y + 11} fontSize="7" fill={C.muted} textAnchor="end">{d.label}</text>
+            <rect x={padLeft} y={y} width={Math.max(w, 1)} height={14} fill={color} rx="2" />
+            <text x={padLeft + w + 4} y={y + 11} fontSize="7" fill={C.text}>{d.value}{unit}</text>
+          </g>
+        );
+      })}
+    </svg>
+  );
+}
+
+function LineChartSimple({ data, color }) {
+  const W = 300, H = 120, pad = 10;
+  const values = data.map((d) => d.weight);
+  const min = Math.min(...values), max = Math.max(...values);
+  const range = max - min || 1;
+  const stepX = (W - pad * 2) / (data.length - 1 || 1);
+  const points = data.map((d, i) => {
+    const x = pad + i * stepX;
+    const y = H - pad - ((d.weight - min) / range) * (H - pad * 2);
+    return `${x},${y}`;
+  });
+  const everyNth = Math.max(1, Math.ceil(data.length / 6));
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} style={{ width: "100%", height: "auto", display: "block" }}>
+      <polyline points={points.join(" ")} fill="none" stroke={color} strokeWidth="2" />
+      {points.map((p, i) => {
+        const [x, y] = p.split(",");
+        return <circle key={i} cx={x} cy={y} r="2.5" fill={color} />;
+      })}
+      {data.map((d, i) => (i % everyNth === 0 ? <text key={i} x={pad + i * stepX} y={H - 1} fontSize="6" fill={C.muted} textAnchor="middle">{d.label}</text> : null))}
+    </svg>
+  );
+}
+
+function Ticker({ entries, bodyStats, goal, onEditGoal }) {
+  const [editing, setEditing] = useState(false);
+  const [gName, setGName] = useState(goal?.name || "");
+  const [gDate, setGDate] = useState(goal?.date || "");
+
+  const weekStartNow = startOfWeek(new Date());
+  const sessionsThisWeek = entries.filter((e) => weekKey(new Date(e.date)) === weekKey(weekStartNow)).length;
+  const hoursThisWeek = entries
+    .filter((e) => weekKey(new Date(e.date)) === weekKey(weekStartNow))
+    .reduce((sum, e) => sum + (Number(e.duration) || 0), 0) / 60;
+
+  const sortedWeights = [...bodyStats].sort((a, b) => a.date.localeCompare(b.date));
+  const lastWeight = sortedWeights[sortedWeights.length - 1];
+  const prevWeight = sortedWeights[sortedWeights.length - 2];
+  const weightDelta = lastWeight && prevWeight ? (lastWeight.weight - prevWeight.weight).toFixed(1) : null;
+
+  const daysToRace = goal?.date
+    ? Math.ceil((new Date(goal.date + "T00:00:00") - new Date(todayISO() + "T00:00:00")) / 86400000)
+    : null;
+
+  const Stat = ({ label, value, unit }) => (
+    <div style={{ display: "flex", flexDirection: "column", gap: 2, minWidth: 0, flex: 1 }}>
+      <span className="ft-mono" style={{ fontSize: 20, color: C.signal, whiteSpace: "nowrap" }}>
+        {value}
+        {unit && <span style={{ fontSize: 12, color: C.muted, marginLeft: 3 }}>{unit}</span>}
+      </span>
+      <span style={{ fontSize: 10, color: C.muted, textTransform: "uppercase", letterSpacing: "0.04em", whiteSpace: "nowrap" }}>{label}</span>
+    </div>
+  );
+
+  return (
+    <div className="ft-card" style={{ display: "flex", flexDirection: "column", gap: 12, borderLeft: `3px solid ${C.signal}` }}>
+      <div style={{ display: "flex", gap: 12 }}>
+        <Stat label="Sessions/Wo." value={sessionsThisWeek} />
+        <Stat label="Std./Wo." value={hoursThisWeek.toFixed(1)} />
+        <Stat label="Gewicht Δ" value={weightDelta !== null ? (weightDelta > 0 ? `+${weightDelta}` : weightDelta) : "–"} unit="kg" />
+      </div>
+      {!editing ? (
+        <button
+          className="ft-btn-ghost"
+          style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 6, width: "100%" }}
+          onClick={() => setEditing(true)}
+        >
+          <Settings2 size={13} />
+          {daysToRace !== null ? (
+            <span>
+              <span className="ft-mono" style={{ color: C.signal }}>{daysToRace}</span> Tage bis {goal.name}
+            </span>
+          ) : (
+            "Zielrennen setzen"
+          )}
+        </button>
+      ) : (
+        <div style={{ display: "flex", gap: 6, alignItems: "center", flexWrap: "wrap" }}>
+          <input className="ft-input" style={{ flex: 1, minWidth: 120 }} placeholder="z.B. Ironman 70.3" value={gName} onChange={(e) => setGName(e.target.value)} />
+          <input className="ft-input" style={{ flex: 1, minWidth: 120 }} type="date" value={gDate} onChange={(e) => setGDate(e.target.value)} />
+          <button className="ft-btn" style={{ padding: "8px 10px" }} onClick={() => { onEditGoal({ name: gName, date: gDate }); setEditing(false); }}>OK</button>
+          <button className="ft-btn-ghost" style={{ padding: "8px 10px" }} onClick={() => setEditing(false)}><X size={14} /></button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ---------- Check-in (Gefühl / Fokus / Musik) ----------
+function CheckIn({ feeling, focus, sleep, music, onFeeling, onFocus, onSleep, onMusic }) {
+  const score = calcScore(feeling, focus, sleep);
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+      <div>
+        <span style={{ fontSize: 12, color: C.muted }}>Körperliches Gefühl</span>
+        <div style={{ display: "flex", gap: 4, marginTop: 4 }}>
+          {[1, 2, 3, 4, 5].map((n) => (
+            <button key={n} className={`ft-pill ${Number(feeling) === n ? "active" : ""}`} onClick={() => onFeeling(n)}>{n}</button>
+          ))}
+        </div>
+        {feeling && <span style={{ fontSize: 11, color: C.muted }}>{FEELING_LABELS[feeling]}</span>}
+      </div>
+      <div>
+        <span style={{ fontSize: 12, color: C.muted }}>Fokus im Kopf</span>
+        <div style={{ display: "flex", gap: 4, marginTop: 4 }}>
+          {[1, 2, 3, 4, 5].map((n) => (
+            <button key={n} className={`ft-pill ${Number(focus) === n ? "active" : ""}`} onClick={() => onFocus(n)}>{n}</button>
+          ))}
+        </div>
+        {focus && <span style={{ fontSize: 11, color: C.muted }}>{FEELING_LABELS[focus]}</span>}
+      </div>
+      <div>
+        <span style={{ fontSize: 12, color: C.muted }}>Schlaf (optional, später vom Wearable)</span>
+        <div style={{ display: "flex", gap: 4, marginTop: 4 }}>
+          {[1, 2, 3, 4, 5].map((n) => (
+            <button key={n} className={`ft-pill ${Number(sleep) === n ? "active" : ""}`} onClick={() => onSleep(n)}>{n}</button>
+          ))}
+        </div>
+        {sleep && <span style={{ fontSize: 11, color: C.muted }}>{FEELING_LABELS[sleep]}</span>}
+      </div>
+      <button className="ft-btn-ghost" style={{ alignSelf: "flex-start", display: "flex", alignItems: "center", gap: 6, color: music ? C.text : C.muted, borderColor: music ? C.signal : C.border }} onClick={() => onMusic(!music)}>
+        <Music size={13} /> Musik gehört
+      </button>
+      {score != null && (
+        <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 12, color: C.muted }}>
+          <span style={{ width: 10, height: 10, borderRadius: "50%", background: scoreColor(score) }} />
+          Session-Score: {score.toFixed(1)}/5
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ---------- log form ----------
+function LogForm({ onAddEntry, onUpdateEntry, onAddBodyStat, entries, library, onAddLibraryItem, onUpdateLibraryItem, onRemoveLibraryItem, playerLibrary, onAddPlayer, onRemovePlayer, editingEntry, onCancelEdit, goal }) {
+  const [tab, setTab] = useState("gym");
+  const [date, setDate] = useState(todayISO());
+  const [duration, setDuration] = useState("");
+  const [distance, setDistance] = useState("");
+  const [avgHR, setAvgHR] = useState("");
+  const [note, setNote] = useState("");
+  const [feeling, setFeeling] = useState(null);
+  const [focus, setFocus] = useState(null);
+  const [sleep, setSleep] = useState(null);
+  const [music, setMusic] = useState(false);
+  const [padelMatches, setPadelMatches] = useState([{ partner: "", opponent1: "", opponent2: "", result: "training", sets: [{ mine: "", theirs: "" }] }]);
+  const [showPlayerManage, setShowPlayerManage] = useState(false);
+  const [newPlayer, setNewPlayer] = useState("");
+  const [swimSets, setSwimSets] = useState([]);
+  const [trainingType, setTrainingType] = useState("");
+  const [hrZone, setHrZone] = useState("");
+  const [splits, setSplits] = useState([]);
+  const [exercises, setExercises] = useState([{ name: "", sets: [{ reps: "", weight: "" }, { reps: "", weight: "" }] }]);
+  const [weight, setWeight] = useState("");
+  const [restingHR, setRestingHR] = useState("");
+  const [showLibraryManage, setShowLibraryManage] = useState(false);
+  const [newEx, setNewEx] = useState({ name: "", muscleGroup: MUSCLE_GROUPS[0], repLow: "6", repHigh: "8" });
+  const [editingLibName, setEditingLibName] = useState(null);
+  const [editDraft, setEditDraft] = useState(null);
+
+  const resetCommon = () => {
+    setDuration(""); setDistance(""); setAvgHR(""); setNote(""); setFeeling(null); setFocus(null); setSleep(null); setMusic(false);
+    setPadelMatches([{ partner: "", opponent1: "", opponent2: "", result: "training", sets: [{ mine: "", theirs: "" }] }]);
+    setExercises([{ name: "", sets: [{ reps: "", weight: "" }, { reps: "", weight: "" }] }]); setWeight(""); setRestingHR("");
+    setTrainingType(""); setHrZone(""); setSplits([]); setSwimSets([]);
+  };
+
+  // Eintrag zum Bearbeiten in die Formularfelder laden
+  useEffect(() => {
+    if (!editingEntry) return;
+    setTab(editingEntry.discipline);
+    setDate(editingEntry.date);
+    setDuration(String(editingEntry.duration));
+    setNote(editingEntry.note || "");
+    setFeeling(editingEntry.feeling || null);
+    setFocus(editingEntry.focus || null);
+    setSleep(editingEntry.sleep || null);
+    setMusic(!!editingEntry.music);
+    if (editingEntry.discipline === "gym") {
+      setExercises((editingEntry.exercises || []).map((ex) => ({ name: ex.name, sets: ex.sets.map((s) => ({ reps: String(s.reps), weight: String(s.weight) })) })));
+    } else if (editingEntry.discipline === "padel") {
+      const legacyMatch = editingEntry.matches ? null : { partner: editingEntry.partner || "", opponent1: editingEntry.opponent1 || editingEntry.opponent || "", opponent2: editingEntry.opponent2 || "", result: editingEntry.result || "training", sets: editingEntry.sets || [{ mine: "", theirs: "" }] };
+      const matches = editingEntry.matches && editingEntry.matches.length ? editingEntry.matches : [legacyMatch];
+      setPadelMatches(matches.map((m) => ({ partner: m.partner || "", opponent1: m.opponent1 || "", opponent2: m.opponent2 || "", result: m.result || "training", sets: (m.sets && m.sets.length ? m.sets : [{ mine: "", theirs: "" }]).map((s) => ({ mine: String(s.mine), theirs: String(s.theirs) })) })));
+    } else {
+      setDistance(editingEntry.distance != null ? String(editingEntry.distance) : "");
+      setAvgHR(editingEntry.avgHR != null ? String(editingEntry.avgHR) : "");
+      setTrainingType(editingEntry.trainingType || "");
+      setHrZone(editingEntry.hrZone || "");
+      setSplits((editingEntry.splits || []).map((s) => ({ distance: String(s.distance), duration: String(s.duration) })));
+      setSwimSets((editingEntry.swimSets || []).map((s) => ({ technique: s.technique, distance: String(s.distance), equipment: s.equipment || [], intensity: s.intensity || "locker" })));
+    }
+  }, [editingEntry]);
+
+  // Bei Schwimm-Sets die Gesamtdistanz automatisch aus den Technik-Abschnitten summieren
+  useEffect(() => {
+    if (tab === "swim" && swimSets.length > 0) setDistance(String(Math.round(swimSetsTotal * 1000) / 1000));
+  }, [swimSets]);
+
+  const addMatch = () => setPadelMatches([...padelMatches, { partner: "", opponent1: "", opponent2: "", result: "training", sets: [{ mine: "", theirs: "" }] }]);
+  const removeMatch = (i) => { if (padelMatches.length <= 1) return; setPadelMatches(padelMatches.filter((_, idx) => idx !== i)); };
+  const updateMatchField = (i, field, val) => { const next = [...padelMatches]; next[i] = { ...next[i], [field]: val }; setPadelMatches(next); };
+  const addMatchSet = (mIdx) => { const next = [...padelMatches]; next[mIdx] = { ...next[mIdx], sets: [...next[mIdx].sets, { mine: "", theirs: "" }] }; setPadelMatches(next); };
+  const removeMatchSet = (mIdx, sIdx) => { const next = [...padelMatches]; if (next[mIdx].sets.length <= 1) return; next[mIdx] = { ...next[mIdx], sets: next[mIdx].sets.filter((_, i) => i !== sIdx) }; setPadelMatches(next); };
+  const updateMatchSet = (mIdx, sIdx, field, val) => { const next = [...padelMatches]; const sets = [...next[mIdx].sets]; sets[sIdx] = { ...sets[sIdx], [field]: val }; next[mIdx] = { ...next[mIdx], sets }; setPadelMatches(next); };
+
+  const addNewPlayer = () => {
+    const name = newPlayer.trim();
+    if (!name || playerLibrary.includes(name)) return;
+    onAddPlayer(name);
+    setNewPlayer("");
+  };
+
+  const addSwimSet = () => setSwimSets([...swimSets, { technique: "kraul", distance: "", equipment: [], intensity: "locker" }]);
+  const removeSwimSet = (i) => setSwimSets(swimSets.filter((_, idx) => idx !== i));
+  const updateSwimSet = (i, field, val) => { const next = [...swimSets]; next[i] = { ...next[i], [field]: val }; setSwimSets(next); };
+  const toggleSwimEquipment = (i, eq) => {
+    const next = [...swimSets];
+    const has = next[i].equipment.includes(eq);
+    next[i] = { ...next[i], equipment: has ? next[i].equipment.filter((x) => x !== eq) : [...next[i].equipment, eq] };
+    setSwimSets(next);
+  };
+  const swimSetsTotal = swimSets.reduce((s, x) => s + (Number(x.distance) || 0), 0);
+
+  const addSplit = () => setSplits([...splits, { distance: "", duration: "" }]);
+  const removeSplit = (i) => setSplits(splits.filter((_, idx) => idx !== i));
+  const updateSplit = (i, field, val) => { const next = [...splits]; next[i] = { ...next[i], [field]: val }; setSplits(next); };
+
+  // letzte Leistung für eine Übung aus dem bisherigen Verlauf ermitteln (inkl. Sätze + Session-Score)
+  const getLastPerf = (name) => {
+    if (!name) return null;
+    const matches = entries
+      .filter((e) => e.discipline === "gym")
+      .flatMap((e) => (e.exercises || []).filter((ex) => ex.name === name).map((ex) => ({ ...ex, date: e.date, sessionScore: e.sessionScore })))
+      .sort((a, b) => a.date.localeCompare(b.date));
+    return matches[matches.length - 1] || null;
+  };
+
+  // Progressionsregel: bei guter/unbekannter Session-Qualität normal steigern (Wdh. bis zum
+  // übungseigenen Maximum, danach Gewicht hoch); war die letzte Session nicht gut, nur +1 Wdh.
+  const nextTarget = (last) => {
+    if (!last || !last.sets || last.sets.length === 0) return null;
+    const range = getExRange(library, last.name);
+    const quality = last.sessionScore == null ? "unknown" : last.sessionScore >= 3.5 ? "good" : "poor";
+    const sets = last.sets.map((s) => {
+      const reps = Number(s.reps) || 0, w = Number(s.weight) || 0;
+      if (!reps || !w) return { reps: s.reps || "", weight: s.weight || "" };
+      if (quality === "poor") return { reps: reps + 1, weight: w };
+      if (reps < range.repHigh) return { reps: reps + 1, weight: w };
+      const step = w >= 20 ? 2.5 : 1;
+      return { reps: range.repLow, weight: w + step };
+    });
+    const qualityNote = quality === "poor" ? " · letzte Session war nicht optimal, daher nur Wdh. steigern" : "";
+    return { sets, note: `${sets.map((s) => `${s.reps}×${s.weight}kg`).join(", ")}${qualityNote}` };
+  };
+
+  const setExerciseName = (i, name) => {
+    const next = [...exercises];
+    const last = getLastPerf(name);
+    next[i] = { name, sets: last ? last.sets.map((s) => ({ reps: String(s.reps), weight: String(s.weight) })) : next[i].sets };
+    setExercises(next);
+  };
+  const updateSetField = (exIdx, setIdx, field, val) => {
+    const next = [...exercises];
+    const sets = [...next[exIdx].sets];
+    sets[setIdx] = { ...sets[setIdx], [field]: val };
+    next[exIdx] = { ...next[exIdx], sets };
+    setExercises(next);
+  };
+  const addSetRow = (exIdx) => {
+    const next = [...exercises];
+    next[exIdx] = { ...next[exIdx], sets: [...next[exIdx].sets, { reps: "", weight: "" }] };
+    setExercises(next);
+  };
+  const removeSetRow = (exIdx, setIdx) => {
+    const next = [...exercises];
+    if (next[exIdx].sets.length <= 1) return;
+    next[exIdx] = { ...next[exIdx], sets: next[exIdx].sets.filter((_, i) => i !== setIdx) };
+    setExercises(next);
+  };
+  const applyTarget = (exIdx, target) => {
+    const next = [...exercises];
+    next[exIdx] = { ...next[exIdx], sets: target.sets.map((s) => ({ reps: String(s.reps), weight: String(s.weight) })) };
+    setExercises(next);
+  };
+  const addExerciseRow = () => setExercises([...exercises, { name: "", sets: [{ reps: "", weight: "" }, { reps: "", weight: "" }] }]);
+
+  const startEditLib = (item) => { setEditingLibName(item.name); setEditDraft({ ...item, repLow: String(item.repLow), repHigh: String(item.repHigh) }); };
+  const saveEditLib = () => {
+    onUpdateLibraryItem(editingLibName, { name: editDraft.name.trim(), muscleGroup: editDraft.muscleGroup, repLow: Number(editDraft.repLow) || 6, repHigh: Number(editDraft.repHigh) || 8 });
+    setEditingLibName(null); setEditDraft(null);
+  };
+
+  // Empfehlung für die heutige Einheit aus der Plan-Engine (Phase, hart/leicht, 10%-Regel)
+  const getRecommendation = (discipline) => (discipline === "run" ? getRunRecommendation(entries, goal) : getSwimRecommendation(entries, goal));
+
+  const applyRecommendation = (discipline) => {
+    const rec = getRecommendation(discipline);
+    setTrainingType(rec.type);
+    setHrZone(String(rec.hrZone));
+    setDuration(String(rec.targetDuration));
+    if (discipline === "swim") {
+      setSwimSets(rec.segments.map((s) => ({ technique: s.technique, distance: String(s.distance), equipment: [], intensity: s.intensity })));
+    }
+  };
+
+  // Letzte Session zum Vergleich (informativ, die Zielsetzung übernimmt jetzt die Plan-Engine oben)
+  const getLastCardioNote = (discipline) => {
+    const past = entries.filter((e) => e.discipline === discipline && e.distance && e.duration).sort((a, b) => a.date.localeCompare(b.date));
+    const last = past[past.length - 1];
+    if (!last) return null;
+    return `Letztes Mal: ${last.distance}km in ${last.duration}min (${paceLabel(discipline, last.distance, last.duration)})`;
+  };
+
+  const submit = () => {
+    if (tab === "body") {
+      if (!weight) return;
+      onAddBodyStat({ id: Date.now(), date, weight: Number(weight), restingHR: restingHR ? Number(restingHR) : null, note });
+      resetCommon();
+      return;
+    }
+    if (!duration) return;
+    const sessionScore = calcScore(feeling, focus, sleep);
+    const base = { id: editingEntry ? editingEntry.id : Date.now(), date, discipline: tab, duration: Number(duration), note, feeling, focus, sleep, music, sessionScore };
+    if (tab === "gym") {
+      base.exercises = exercises
+        .filter((ex) => ex.name.trim())
+        .map((ex) => ({ name: ex.name, sets: ex.sets.filter((s) => s.reps && s.weight).map((s) => ({ reps: Number(s.reps), weight: Number(s.weight) })) }))
+        .filter((ex) => ex.sets.length > 0);
+    } else if (tab === "padel") {
+      base.matches = padelMatches
+        .map((m) => ({ ...m, sets: m.sets.filter((s) => s.mine !== "" && s.theirs !== "").map((s) => ({ mine: Number(s.mine), theirs: Number(s.theirs) })) }))
+        .filter((m) => m.partner || m.opponent1 || m.opponent2 || m.sets.length > 0);
+    } else {
+      base.distance = distance ? Number(distance) : null;
+      base.avgHR = avgHR ? Number(avgHR) : null;
+      base.trainingType = trainingType;
+      base.hrZone = hrZone;
+      base.splits = splits.filter((s) => s.distance && s.duration).map((s) => ({ distance: Number(s.distance), duration: Number(s.duration) }));
+      base.swimSets = swimSets.filter((s) => s.distance).map((s) => ({ technique: s.technique, distance: Number(s.distance), equipment: s.equipment, intensity: s.intensity }));
+      if (!editingEntry) {
+        const rec = getRecommendation(tab);
+        base.plannedType = rec.type;
+        base.plannedHrZone = rec.hrZone;
+        base.plannedDuration = rec.targetDuration;
+        if (tab === "swim") base.plannedSegments = rec.segments;
+        base.plannedPhase = rec.phase;
+      }
+    }
+    if (editingEntry) onUpdateEntry(base);
+    else onAddEntry(base);
+    resetCommon();
+  };
+
+  const tabs = [
+    ...Object.entries(DISCIPLINES).map(([key, d]) => ({ key, ...d })),
+    { key: "body", label: "Körperwerte", color: C.muted, icon: Scale },
+  ];
+
+  return (
+    <div className="ft-fade" style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+      <div style={{ display: "flex", gap: 4, overflowX: "auto" }}>
+        {tabs.map((t) => {
+          const Icon = t.icon;
+          const active = tab === t.key;
+          return (
+            <button key={t.key} className={`ft-tab ${active ? "active" : ""}`} onClick={() => setTab(t.key)}>
+              <Icon size={18} color={active ? t.color : C.muted} />
+              {t.label}
+            </button>
+          );
+        })}
+      </div>
+
+      <div className="ft-card" style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+        {editingEntry && (
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: 12, color: C.muted }}>
+            <span>Eintrag wird bearbeitet</span>
+            <button className="ft-btn-ghost" onClick={onCancelEdit}>Abbrechen</button>
+          </div>
+        )}
+        <label style={{ fontSize: 12, color: C.muted }}>
+          Datum
+          <input className="ft-input" style={{ marginTop: 4 }} type="date" value={date} onChange={(e) => setDate(e.target.value)} />
+        </label>
+
+        {tab === "body" ? (
+          <div style={{ display: "flex", gap: 10 }}>
+            <label style={{ fontSize: 12, color: C.muted, flex: 1 }}>
+              Gewicht (kg)
+              <input className="ft-input" style={{ marginTop: 4 }} type="number" step="0.1" value={weight} onChange={(e) => setWeight(e.target.value)} />
+            </label>
+            <label style={{ fontSize: 12, color: C.muted, flex: 1 }}>
+              Ruhepuls (bpm)
+              <input className="ft-input" style={{ marginTop: 4 }} type="number" value={restingHR} onChange={(e) => setRestingHR(e.target.value)} />
+            </label>
+          </div>
+        ) : (
+          <label style={{ fontSize: 12, color: C.muted }}>
+            Dauer (Minuten)
+            <input className="ft-input" style={{ marginTop: 4 }} type="number" value={duration} onChange={(e) => setDuration(e.target.value)} />
+          </label>
+        )}
+
+        {(tab === "run" || tab === "swim") && (
+          <>
+            {(() => {
+              const rec = getRecommendation(tab);
+              const label = tab === "run" ? RUN_TYPE_LABELS[rec.type] : SWIM_TYPE_LABELS[rec.type];
+              return (
+                <div className="ft-card" style={{ background: C.surface2, borderLeft: `3px solid ${C.signal}` }}>
+                  <div style={{ fontSize: 11, color: C.muted, textTransform: "uppercase", letterSpacing: "0.04em" }}>
+                    Empfehlung für heute {rec.phase && `· Phase: ${PHASE_LABELS[rec.phase]}`}
+                  </div>
+                  <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginTop: 4, flexWrap: "wrap" }}>
+                    <span className="ft-display" style={{ fontSize: 20 }}>{label}</span>
+                    <span className="ft-mono" style={{ color: C.signal, fontSize: 15 }}>~{rec.targetDuration} min</span>
+                    <span className="ft-mono" style={{ color: C.muted, fontSize: 13 }}>Z{rec.hrZone}</span>
+                  </div>
+                  {tab === "swim" && (
+                    <div style={{ marginTop: 6, display: "flex", flexDirection: "column", gap: 2 }}>
+                      {rec.segments.map((s, i) => (
+                        <span key={i} className="ft-mono" style={{ fontSize: 13, color: C.text }}>
+                          {SWIM_TECHNIQUES[s.technique]}: {s.distance}km {s.intensity === "zügig" ? "· zügig" : "· locker"}
+                        </span>
+                      ))}
+                      <span style={{ fontSize: 11, color: C.muted }}>Gesamt: {rec.totalDistance}km</span>
+                    </div>
+                  )}
+                  <button className="ft-btn-ghost" style={{ marginTop: 8 }} onClick={() => applyRecommendation(tab)}>Übernehmen</button>
+                  {!rec.phase && <div style={{ fontSize: 11, color: C.muted, marginTop: 6 }}>Ohne Zielrennen mit Datum ist das nur eine grobe Faustregel ohne Periodisierung.</div>}
+                </div>
+              );
+            })()}
+            <div style={{ display: "flex", gap: 10 }}>
+              <label style={{ fontSize: 12, color: C.muted, flex: 1 }}>
+                Distanz (km) {tab === "swim" && swimSets.length > 0 && <span style={{ fontSize: 10 }}>· automatisch aus Techniken</span>}
+                <input className="ft-input" style={{ marginTop: 4 }} type="number" step="0.1" value={distance} readOnly={tab === "swim" && swimSets.length > 0} onChange={(e) => setDistance(e.target.value)} />
+              </label>
+              <label style={{ fontSize: 12, color: C.muted, flex: 1 }}>
+                Ø Puls (bpm)
+                <input className="ft-input" style={{ marginTop: 4 }} type="number" value={avgHR} onChange={(e) => setAvgHR(e.target.value)} />
+              </label>
+            </div>
+            <div style={{ display: "flex", gap: 10 }}>
+              <label style={{ fontSize: 12, color: C.muted, flex: 1 }}>
+                Trainingsart (Ist)
+                <select className="ft-input" style={{ marginTop: 4 }} value={trainingType} onChange={(e) => setTrainingType(e.target.value)}>
+                  <option value="">–</option>
+                  <option value="grundlage">Grundlage/Long Run</option>
+                  <option value="tempo">Tempo/Schwelle</option>
+                  <option value="intervalle">Intervalle</option>
+                  <option value="regeneration">Regeneration</option>
+                  <option value="ausdauer">Ausdauer</option>
+                  <option value="technik">Technik/Drills</option>
+                  <option value="wettkampf">Wettkampf</option>
+                </select>
+              </label>
+              <label style={{ fontSize: 12, color: C.muted, flex: 1 }}>
+                HF-Zone (Ist)
+                <select className="ft-input" style={{ marginTop: 4 }} value={hrZone} onChange={(e) => setHrZone(e.target.value)}>
+                  <option value="">–</option>
+                  <option value="1">Z1 Erholung</option>
+                  <option value="2">Z2 Grundlage</option>
+                  <option value="3">Z3 Tempo</option>
+                  <option value="4">Z4 Schwelle</option>
+                  <option value="5">Z5 Maximal</option>
+                </select>
+              </label>
+            </div>
+            {(() => {
+              const noteText = getLastCardioNote(tab);
+              return noteText ? <div style={{ fontSize: 11, color: C.muted }}>{noteText}</div> : null;
+            })()}
+
+            {tab === "run" && (
+              <div>
+                <span style={{ fontSize: 12, color: C.muted }}>Abschnitte (optional, z.B. Intervalle)</span>
+                {splits.map((s, i) => (
+                  <div key={i} style={{ display: "flex", gap: 6, alignItems: "center", marginTop: 6 }}>
+                    <span className="ft-mono" style={{ fontSize: 11, color: C.muted, width: 20, flexShrink: 0 }}>{i + 1}.</span>
+                    <input className="ft-input" style={{ flex: 1 }} placeholder="km" type="number" step="0.1" value={s.distance} onChange={(e) => updateSplit(i, "distance", e.target.value)} />
+                    <input className="ft-input" style={{ flex: 1 }} placeholder="min" type="number" value={s.duration} onChange={(e) => updateSplit(i, "duration", e.target.value)} />
+                    <X size={14} style={{ cursor: "pointer", color: C.muted, flexShrink: 0 }} onClick={() => removeSplit(i)} />
+                  </div>
+                ))}
+                <button className="ft-btn-ghost" style={{ marginTop: 6, padding: "4px 10px", fontSize: 11 }} onClick={addSplit}>+ Abschnitt</button>
+              </div>
+            )}
+
+            {tab === "swim" && (
+              <div>
+                <span style={{ fontSize: 12, color: C.muted }}>Techniken &amp; Ausrüstung</span>
+                {swimSets.map((s, i) => (
+                  <div key={i} className="ft-card" style={{ background: C.surface2, marginTop: 6, display: "flex", flexDirection: "column", gap: 6, padding: 10 }}>
+                    <div style={{ display: "flex", gap: 6 }}>
+                      <select className="ft-input" style={{ flex: 2 }} value={s.technique} onChange={(e) => updateSwimSet(i, "technique", e.target.value)}>
+                        {Object.entries(SWIM_TECHNIQUES).map(([k, l]) => <option key={k} value={k}>{l}</option>)}
+                      </select>
+                      <input className="ft-input" style={{ flex: 1 }} placeholder="km" type="number" step="0.05" value={s.distance} onChange={(e) => updateSwimSet(i, "distance", e.target.value)} />
+                      <X size={14} style={{ cursor: "pointer", color: C.muted, alignSelf: "center", flexShrink: 0 }} onClick={() => removeSwimSet(i)} />
+                    </div>
+                    <div style={{ display: "flex", gap: 6 }}>
+                      <button className={`ft-pill ${s.intensity === "locker" ? "active" : ""}`} onClick={() => updateSwimSet(i, "intensity", "locker")}>Locker</button>
+                      <button className={`ft-pill ${s.intensity === "zügig" ? "active" : ""}`} onClick={() => updateSwimSet(i, "intensity", "zügig")}>Zügig</button>
+                    </div>
+                    <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                      {SWIM_EQUIPMENT.map((eq) => (
+                        <button key={eq} className={`ft-btn-ghost ${s.equipment.includes(eq) ? "on" : ""}`} style={{ padding: "4px 10px", fontSize: 11 }} onClick={() => toggleSwimEquipment(i, eq)}>{eq}</button>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+                <button className="ft-btn-ghost" style={{ marginTop: 6, padding: "4px 10px", fontSize: 11 }} onClick={addSwimSet}>+ Technik-Abschnitt</button>
+              </div>
+            )}
+          </>
+        )}
+
+        {tab === "padel" && (
+          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <span style={{ fontSize: 12, color: C.muted }}>Spieler</span>
+              <button className="ft-btn-ghost" style={{ padding: "4px 10px", fontSize: 11 }} onClick={() => setShowPlayerManage((v) => !v)}>Spieler verwalten</button>
+            </div>
+
+            {showPlayerManage && (
+              <div className="ft-card" style={{ background: C.surface2, display: "flex", flexDirection: "column", gap: 8 }}>
+                <div style={{ display: "flex", gap: 6 }}>
+                  <input className="ft-input" placeholder="Neuer Spieler" value={newPlayer} onChange={(e) => setNewPlayer(e.target.value)} onKeyDown={(e) => e.key === "Enter" && addNewPlayer()} />
+                  <button className="ft-btn" style={{ padding: "8px 12px" }} onClick={addNewPlayer}><Plus size={14} /></button>
+                </div>
+                {playerLibrary.length === 0 ? (
+                  <span style={{ fontSize: 12, color: C.muted }}>Noch keine Spieler angelegt.</span>
+                ) : (
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                    {playerLibrary.map((name) => (
+                      <span key={name} style={{ display: "flex", alignItems: "center", gap: 4, background: C.surface, border: `1px solid ${C.border}`, borderRadius: 6, padding: "4px 8px", fontSize: 12 }}>
+                        {name}
+                        <X size={12} style={{ cursor: "pointer", color: C.muted }} onClick={() => onRemovePlayer(name)} />
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
+            {playerLibrary.length === 0 && !showPlayerManage && (
+              <span style={{ fontSize: 12, color: C.muted }}>Lege zuerst über "Spieler verwalten" Partner/Gegner an.</span>
+            )}
+
+            {padelMatches.map((m, mIdx) => (
+              <div key={mIdx} className="ft-card" style={{ background: C.surface2, display: "flex", flexDirection: "column", gap: 8, padding: 12 }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                  <span style={{ fontSize: 12, color: C.muted, fontWeight: 700 }}>Match {mIdx + 1}</span>
+                  {padelMatches.length > 1 && <X size={14} style={{ cursor: "pointer", color: C.muted }} onClick={() => removeMatch(mIdx)} />}
+                </div>
+                <select className="ft-input" value={m.partner} onChange={(e) => updateMatchField(mIdx, "partner", e.target.value)}>
+                  <option value="">Partner wählen</option>
+                  {playerLibrary.map((name) => <option key={name} value={name}>{name}</option>)}
+                </select>
+                <div style={{ display: "flex", gap: 6 }}>
+                  <select className="ft-input" value={m.opponent1} onChange={(e) => updateMatchField(mIdx, "opponent1", e.target.value)}>
+                    <option value="">Gegner 1</option>
+                    {playerLibrary.map((name) => <option key={name} value={name}>{name}</option>)}
+                  </select>
+                  <select className="ft-input" value={m.opponent2} onChange={(e) => updateMatchField(mIdx, "opponent2", e.target.value)}>
+                    <option value="">Gegner 2</option>
+                    {playerLibrary.map((name) => <option key={name} value={name}>{name}</option>)}
+                  </select>
+                </div>
+                <select className="ft-input" value={m.result} onChange={(e) => updateMatchField(mIdx, "result", e.target.value)}>
+                  <option value="training">Training</option>
+                  <option value="win">Turnier – Sieg</option>
+                  <option value="loss">Turnier – Niederlage</option>
+                </select>
+                {m.sets.map((s, sIdx) => (
+                  <div key={sIdx} style={{ display: "flex", gap: 6, alignItems: "center" }}>
+                    <span className="ft-mono" style={{ fontSize: 11, color: C.muted, width: 42, flexShrink: 0 }}>Satz {sIdx + 1}</span>
+                    <input className="ft-input" style={{ flex: 1 }} placeholder="Wir" type="number" value={s.mine} onChange={(e) => updateMatchSet(mIdx, sIdx, "mine", e.target.value)} />
+                    <input className="ft-input" style={{ flex: 1 }} placeholder="Gegner" type="number" value={s.theirs} onChange={(e) => updateMatchSet(mIdx, sIdx, "theirs", e.target.value)} />
+                    {m.sets.length > 1 && <X size={14} style={{ cursor: "pointer", color: C.muted, flexShrink: 0 }} onClick={() => removeMatchSet(mIdx, sIdx)} />}
+                  </div>
+                ))}
+                <button className="ft-btn-ghost" style={{ alignSelf: "flex-start", padding: "4px 10px", fontSize: 11 }} onClick={() => addMatchSet(mIdx)}>+ Satz</button>
+              </div>
+            ))}
+            <button className="ft-btn-ghost" style={{ alignSelf: "flex-start", display: "flex", alignItems: "center", gap: 6 }} onClick={addMatch}>
+              <Plus size={13} /> Match hinzufügen
+            </button>
+          </div>
+        )}
+
+        {tab === "gym" && (
+          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <span style={{ fontSize: 12, color: C.muted }}>Übungen</span>
+              <button className="ft-btn-ghost" style={{ padding: "4px 10px", fontSize: 11 }} onClick={() => setShowLibraryManage((v) => !v)}>
+                Übungen verwalten
+              </button>
+            </div>
+
+            {showLibraryManage && (
+              <div className="ft-card" style={{ background: C.surface2, display: "flex", flexDirection: "column", gap: 10 }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                  <input className="ft-input" placeholder="Neue Übung, z.B. Kniebeuge" value={newEx.name} onChange={(e) => setNewEx({ ...newEx, name: e.target.value })} />
+                  <div style={{ display: "flex", gap: 6 }}>
+                    <select className="ft-input" value={newEx.muscleGroup} onChange={(e) => {
+                      const mg = e.target.value;
+                      const [lo, hi] = REP_DEFAULTS[mg] || [6, 8];
+                      setNewEx({ ...newEx, muscleGroup: mg, repLow: String(lo), repHigh: String(hi) });
+                    }}>
+                      {MUSCLE_GROUPS.map((m) => <option key={m} value={m}>{m}</option>)}
+                    </select>
+                    <input className="ft-input" style={{ width: 56 }} type="number" value={newEx.repLow} onChange={(e) => setNewEx({ ...newEx, repLow: e.target.value })} />
+                    <span style={{ alignSelf: "center", color: C.muted }}>–</span>
+                    <input className="ft-input" style={{ width: 56 }} type="number" value={newEx.repHigh} onChange={(e) => setNewEx({ ...newEx, repHigh: e.target.value })} />
+                    <button className="ft-btn" style={{ padding: "8px 12px" }} onClick={() => {
+                      if (!newEx.name.trim()) return;
+                      onAddLibraryItem({ name: newEx.name.trim(), muscleGroup: newEx.muscleGroup, repLow: Number(newEx.repLow) || 6, repHigh: Number(newEx.repHigh) || 8 });
+                      setNewEx({ name: "", muscleGroup: MUSCLE_GROUPS[0], repLow: "6", repHigh: "8" });
+                    }}><Plus size={14} /></button>
+                  </div>
+                </div>
+                {library.length === 0 ? (
+                  <span style={{ fontSize: 12, color: C.muted }}>Noch keine Übungen angelegt.</span>
+                ) : (
+                  <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                    {library.map((item) => (
+                      editingLibName === item.name ? (
+                        <div key={item.name} style={{ display: "flex", flexDirection: "column", gap: 6, background: C.surface, borderRadius: 8, padding: 8 }}>
+                          <input className="ft-input" value={editDraft.name} onChange={(e) => setEditDraft({ ...editDraft, name: e.target.value })} />
+                          <div style={{ display: "flex", gap: 6 }}>
+                            <select className="ft-input" value={editDraft.muscleGroup} onChange={(e) => {
+                              const mg = e.target.value;
+                              const [lo, hi] = REP_DEFAULTS[mg] || [6, 8];
+                              setEditDraft({ ...editDraft, muscleGroup: mg, repLow: String(lo), repHigh: String(hi) });
+                            }}>
+                              {MUSCLE_GROUPS.map((m) => <option key={m} value={m}>{m}</option>)}
+                            </select>
+                            <input className="ft-input" style={{ width: 56 }} type="number" value={editDraft.repLow} onChange={(e) => setEditDraft({ ...editDraft, repLow: e.target.value })} />
+                            <input className="ft-input" style={{ width: 56 }} type="number" value={editDraft.repHigh} onChange={(e) => setEditDraft({ ...editDraft, repHigh: e.target.value })} />
+                            <button className="ft-btn" style={{ padding: "8px 10px" }} onClick={saveEditLib}><Check size={14} /></button>
+                            <button className="ft-btn-ghost" style={{ padding: "8px 10px" }} onClick={() => setEditingLibName(null)}><X size={14} /></button>
+                          </div>
+                        </div>
+                      ) : (
+                        <div key={item.name} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", background: C.surface, border: `1px solid ${C.border}`, borderRadius: 8, padding: "6px 10px" }}>
+                          <span style={{ fontSize: 13 }}>{item.name} <span style={{ color: C.muted, fontSize: 11 }}>· {item.muscleGroup || "–"} · {item.repLow}-{item.repHigh} Wdh.</span></span>
+                          <div style={{ display: "flex", gap: 8 }}>
+                            <Pencil size={13} style={{ cursor: "pointer", color: C.muted }} onClick={() => startEditLib(item)} />
+                            <X size={14} style={{ cursor: "pointer", color: C.muted }} onClick={() => onRemoveLibraryItem(item.name)} />
+                          </div>
+                        </div>
+                      )
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
+
+            {library.length === 0 && !showLibraryManage && (
+              <span style={{ fontSize: 12, color: C.muted }}>Lege zuerst über "Übungen verwalten" ein paar Übungen an.</span>
+            )}
+
+            {exercises.map((ex, exIdx) => {
+              const last = getLastPerf(ex.name);
+              const target = nextTarget(last);
+              return (
+                <div key={exIdx} className="ft-card" style={{ background: C.surface2, display: "flex", flexDirection: "column", gap: 8, padding: 12 }}>
+                  <select className="ft-input" value={ex.name} onChange={(e) => setExerciseName(exIdx, e.target.value)}>
+                    <option value="">Übung wählen</option>
+                    {library.map((item) => (
+                      <option key={item.name} value={item.name}>{item.name}</option>
+                    ))}
+                  </select>
+
+                  {ex.sets.map((s, setIdx) => (
+                    <div key={setIdx} style={{ display: "flex", gap: 6, alignItems: "center" }}>
+                      <span className="ft-mono" style={{ fontSize: 11, color: C.muted, width: 42, flexShrink: 0 }}>Satz {setIdx + 1}</span>
+                      <input className="ft-input" style={{ flex: 1 }} placeholder="Wdh." type="number" value={s.reps} onChange={(e) => updateSetField(exIdx, setIdx, "reps", e.target.value)} />
+                      <input className="ft-input" style={{ flex: 1 }} placeholder="kg" type="number" value={s.weight} onChange={(e) => updateSetField(exIdx, setIdx, "weight", e.target.value)} />
+                      {ex.sets.length > 1 && (
+                        <X size={14} style={{ cursor: "pointer", color: C.muted, flexShrink: 0 }} onClick={() => removeSetRow(exIdx, setIdx)} />
+                      )}
+                    </div>
+                  ))}
+                  <button className="ft-btn-ghost" style={{ alignSelf: "flex-start", padding: "4px 10px", fontSize: 11 }} onClick={() => addSetRow(exIdx)}>
+                    + Satz
+                  </button>
+
+                  {ex.name && last && (
+                    <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", fontSize: 11, color: C.muted }}>
+                      <span className="ft-mono">Letztes Mal: {last.sets.map((s) => `${s.reps}×${s.weight}kg`).join(", ")}</span>
+                      {target && (
+                        <>
+                          <span>·</span>
+                          <span style={{ color: C.signal }}>Vorschlag: {target.note}</span>
+                          <button className="ft-btn-ghost" style={{ padding: "2px 8px", fontSize: 10 }} onClick={() => applyTarget(exIdx, target)}>Übernehmen</button>
+                        </>
+                      )}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+            <button className="ft-btn-ghost" style={{ alignSelf: "flex-start", display: "flex", alignItems: "center", gap: 6 }} onClick={addExerciseRow}>
+              <Plus size={13} /> Übung hinzufügen
+            </button>
+          </div>
+        )}
+
+        {tab !== "body" && (
+          <CheckIn feeling={feeling} focus={focus} sleep={sleep} music={music} onFeeling={setFeeling} onFocus={setFocus} onSleep={setSleep} onMusic={setMusic} />
+        )}
+
+        <label style={{ fontSize: 12, color: C.muted }}>
+          Notiz (optional)
+          <input className="ft-input" style={{ marginTop: 4 }} value={note} onChange={(e) => setNote(e.target.value)} />
+        </label>
+
+        <button className="ft-btn" onClick={submit}>
+          <Plus size={16} /> {editingEntry ? "Änderungen speichern" : "Eintrag speichern"}
+        </button>
+      </div>
+    </div>
+  );
+}
+
+// ---------- history ----------
+function History({ entries, onDelete, onEdit }) {
+  const [filter, setFilter] = useState("all");
+  const filtered = entries
+    .filter((e) => filter === "all" || e.discipline === filter)
+    .sort((a, b) => b.date.localeCompare(a.date) || b.id - a.id);
+
+  return (
+    <div className="ft-fade" style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+      <div style={{ display: "flex", gap: 6, overflowX: "auto" }}>
+        <button className="ft-btn-ghost" style={{ borderColor: filter === "all" ? C.signal : C.border, color: filter === "all" ? C.text : C.muted }} onClick={() => setFilter("all")}>Alle</button>
+        {Object.entries(DISCIPLINES).map(([key, d]) => (
+          <button key={key} className="ft-btn-ghost" style={{ borderColor: filter === key ? d.color : C.border, color: filter === key ? C.text : C.muted, whiteSpace: "nowrap" }} onClick={() => setFilter(key)}>
+            {d.label}
+          </button>
+        ))}
+      </div>
+
+      {filtered.length === 0 ? (
+        <div className="ft-card" style={{ textAlign: "center", color: C.muted, fontSize: 13 }}>
+          Noch keine Einträge – lege oben deine erste Session an.
+        </div>
+      ) : (
+        filtered.map((e) => {
+          const d = DISCIPLINES[e.discipline];
+          const Icon = d.icon;
+          return (
+            <div key={e.id} className="ft-card" style={{ display: "flex", alignItems: "flex-start", gap: 12, borderLeft: `3px solid ${d.color}` }}>
+              <Icon size={20} color={d.color} style={{ marginTop: 2, flexShrink: 0 }} />
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}>
+                  <span style={{ fontWeight: 600, fontSize: 14, display: "flex", alignItems: "center", gap: 6 }}>
+                    {e.sessionScore != null && <span style={{ width: 8, height: 8, borderRadius: "50%", background: scoreColor(e.sessionScore) }} />}
+                    {d.label}
+                  </span>
+                  <span className="ft-mono" style={{ fontSize: 12, color: C.muted }}>{fmtDate(e.date)}</span>
+                </div>
+                <div style={{ fontSize: 12, color: C.muted, marginTop: 4 }}>
+                  {e.duration} min
+                  {e.distance ? ` · ${e.distance} km` : ""}
+                  {e.avgHR ? ` · Ø ${e.avgHR} bpm` : ""}
+                  {e.hrZone ? ` · Z${e.hrZone}` : ""}
+                  {e.trainingType ? ` · ${e.trainingType}` : ""}
+                  {e.discipline === "padel" && e.matches ? ` · ${e.matches.length} Match(es)` : ""}
+                  {e.exercises && e.exercises.length > 0 ? ` · ${e.exercises.length} Übung(en)` : ""}
+                  {e.feeling ? ` · Gefühl ${e.feeling}/5` : ""}
+                  {e.focus ? ` · Fokus ${e.focus}/5` : ""}
+                  {e.sleep ? ` · Schlaf ${e.sleep}/5` : ""}
+                  {e.music ? " · 🎵" : ""}
+                </div>
+                {e.plannedDuration != null && (
+                  <div style={{ marginTop: 6, fontSize: 11, color: C.muted }}>
+                    <span className="ft-mono">Plan: {e.plannedDuration}min Z{e.plannedHrZone} ({(e.discipline === "run" ? RUN_TYPE_LABELS : SWIM_TYPE_LABELS)[e.plannedType] || e.plannedType}) · Ist: {e.duration}min{e.avgHR ? ` Ø${e.avgHR}bpm` : ""}{e.hrZone ? ` Z${e.hrZone}` : ""}</span>
+                  </div>
+                )}
+                {e.exercises && e.exercises.length > 0 && (
+                  <div style={{ marginTop: 6, display: "flex", flexDirection: "column", gap: 2 }}>
+                    {e.exercises.map((ex, i) => (
+                      <span key={i} className="ft-mono" style={{ fontSize: 11, color: C.text }}>
+                        {ex.name}: {ex.sets.map((s) => `${s.reps}×${s.weight}kg`).join(", ")}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                {e.splits && e.splits.length > 0 && (
+                  <div style={{ marginTop: 6 }}>
+                    <span className="ft-mono" style={{ fontSize: 11, color: C.text }}>{e.splits.map((s) => `${s.distance}km/${s.duration}min`).join(", ")}</span>
+                  </div>
+                )}
+                {e.swimSets && e.swimSets.length > 0 && (
+                  <div style={{ marginTop: 6, display: "flex", flexDirection: "column", gap: 2 }}>
+                    {e.swimSets.map((s, i) => (
+                      <span key={i} className="ft-mono" style={{ fontSize: 11, color: C.text }}>
+                        {SWIM_TECHNIQUES[s.technique] || s.technique}: {s.distance}km{s.intensity ? ` · ${s.intensity}` : ""}{s.equipment && s.equipment.length > 0 ? ` (${s.equipment.join(", ")})` : ""}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                {e.discipline === "padel" && e.matches && e.matches.length > 0 && (
+                  <div style={{ marginTop: 6, display: "flex", flexDirection: "column", gap: 4 }}>
+                    {e.matches.map((m, i) => (
+                      <div key={i} style={{ fontSize: 11 }}>
+                        <span className="ft-mono" style={{ color: C.text }}>
+                          {m.partner ? `mit ${m.partner}` : "ohne Partner"} vs. {[m.opponent1, m.opponent2].filter(Boolean).join(" & ") || "?"}
+                          {m.result !== "training" ? ` · ${m.result === "win" ? "Sieg" : "Niederlage"}` : ""}
+                          {m.sets && m.sets.length > 0 ? ` · ${m.sets.map((s) => `${s.mine}:${s.theirs}`).join(", ")}` : ""}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+                {e.note && <div style={{ fontSize: 12, color: C.muted, marginTop: 4, fontStyle: "italic" }}>{e.note}</div>}
+              </div>
+              <div style={{ display: "flex", gap: 4, flexShrink: 0 }}>
+                <button className="ft-btn-ghost" style={{ padding: 6 }} onClick={() => onEdit(e)} aria-label="Eintrag bearbeiten">
+                  <Pencil size={14} />
+                </button>
+                <button className="ft-btn-ghost" style={{ padding: 6 }} onClick={() => onDelete(e.id)} aria-label="Eintrag löschen">
+                  <Trash2 size={14} />
+                </button>
+              </div>
+            </div>
+          );
+        })
+      )}
+    </div>
+  );
+}
+
+// ---------- progress ----------
+function Progress({ entries, bodyStats, library, goal, onImportAll }) {
+  const fileInputRef = React.useRef(null);
+
+  const weeklyData = useMemo(() => {
+    const weeks = [];
+    for (let i = 7; i >= 0; i--) weeks.push(startOfWeek(new Date(Date.now() - i * 7 * 86400000)));
+    const buckets = {};
+    weeks.forEach((w) => { buckets[weekKey(w)] = { label: weekLabel(w), gym: 0, run: 0, swim: 0, padel: 0 }; });
+    entries.forEach((e) => {
+      const k = weekKey(new Date(e.date));
+      if (buckets[k]) buckets[k][e.discipline] += (Number(e.duration) || 0) / 60;
+    });
+    return weeks.map((w) => ({ ...buckets[weekKey(w)], ...Object.fromEntries(Object.entries(buckets[weekKey(w)]).map(([k, v]) => [k, typeof v === "number" ? Number(v.toFixed(1)) : v])) }));
+  }, [entries]);
+
+  const weightData = useMemo(
+    () => [...bodyStats].sort((a, b) => a.date.localeCompare(b.date)).map((b) => ({ label: fmtDate(b.date).slice(0, 5), weight: b.weight })),
+    [bodyStats]
+  );
+
+  const pr = useMemo(() => {
+    const maxOf = (disc) => Math.max(0, ...entries.filter((e) => e.discipline === disc && e.distance).map((e) => e.distance));
+    const maxGym = Math.max(0, ...entries.filter((e) => e.discipline === "gym").flatMap((e) => (e.exercises || []).flatMap((ex) => (ex.sets || []).map((s) => Number(s.weight) || 0))));
+    return { run: maxOf("run"), swim: maxOf("swim"), gym: maxGym };
+  }, [entries]);
+
+  const muscleVolume = useMemo(() => {
+    const wk = weekKey(startOfWeek(new Date()));
+    const counts = {};
+    MUSCLE_GROUPS.forEach((m) => { counts[m] = 0; });
+    entries.filter((e) => e.discipline === "gym" && weekKey(new Date(e.date)) === wk).forEach((e) => {
+      (e.exercises || []).forEach((ex) => {
+        const item = library.find((l) => l.name === ex.name);
+        if (item?.muscleGroup && counts[item.muscleGroup] !== undefined) counts[item.muscleGroup] += (ex.sets || []).length;
+      });
+    });
+    return MUSCLE_GROUPS.map((m) => ({ label: m, sets: counts[m] }));
+  }, [entries, library]);
+
+  // Persönliche Bestzeiten: Einträge werden mit 3% Toleranz einer Standard-Distanz
+  // zugeordnet, die schnellste (kürzeste Dauer) davon zählt als Bestzeit
+  const STANDARD_DISTANCES = { run: [1, 5, 10, 15, 21.1, 42.2], swim: [0.4, 0.75, 1, 1.5, 3.8] };
+  const personalBests = useMemo(() => {
+    const result = {};
+    Object.entries(STANDARD_DISTANCES).forEach(([disc, distances]) => {
+      result[disc] = distances.map((d) => {
+        const matches = entries.filter((e) => e.discipline === disc && e.distance && Math.abs(e.distance - d) / d <= 0.03);
+        if (!matches.length) return { distance: d, best: null };
+        const best = matches.reduce((a, b) => (a.duration < b.duration ? a : b));
+        return { distance: d, best: best.duration, paceStr: paceLabel(disc, best.distance, best.duration) };
+      });
+    });
+    return result;
+  }, [entries]);
+
+  // Padel: Bilanz pro Partner und pro Gegner über alle Matches aller Sessions (nur Turnier-Matches zählen für die Quote)
+  const padelStats = useMemo(() => {
+    const tally = {};
+    const bump = (name, role, result) => {
+      if (!name) return;
+      if (!tally[name]) tally[name] = { partner: 0, wins: 0, losses: 0, training: 0 };
+      if (result === "training") tally[name].training += 1;
+      else if (result === "win") tally[name].wins += 1;
+      else if (result === "loss") tally[name].losses += 1;
+      if (role === "partner") tally[name].partner += 1;
+    };
+    entries.filter((e) => e.discipline === "padel").flatMap((e) => e.matches || []).forEach((m) => {
+      bump(m.partner, "partner", m.result);
+      bump(m.opponent1, "opponent", m.result);
+      bump(m.opponent2, "opponent", m.result);
+    });
+    return Object.entries(tally).map(([name, t]) => ({
+      name, ...t, matches: t.wins + t.losses,
+      winRate: t.wins + t.losses > 0 ? Math.round((t.wins / (t.wins + t.losses)) * 100) : null,
+    })).sort((a, b) => b.matches - a.matches);
+  }, [entries]);
+
+  // Schwimmen: Kilometer pro Technik der letzten 8 Wochen
+  const swimTechniqueVolume = useMemo(() => {
+    const counts = {};
+    Object.keys(SWIM_TECHNIQUES).forEach((t) => { counts[t] = 0; });
+    entries.filter((e) => e.discipline === "swim").forEach((e) => {
+      (e.swimSets || []).forEach((s) => { if (counts[s.technique] !== undefined) counts[s.technique] += Number(s.distance) || 0; });
+    });
+    return Object.entries(SWIM_TECHNIQUES).map(([k, label]) => ({ label, km: Number(counts[k].toFixed(2)) }));
+  }, [entries]);
+
+  const [showBackupText, setShowBackupText] = useState(false);
+  const [importText, setImportText] = useState("");
+  const [importMsg, setImportMsg] = useState("");
+  const backupJson = useMemo(() => JSON.stringify({ entries, bodyStats, goal, library }, null, 2), [entries, bodyStats, goal, library]);
+
+  const exportData = () => {
+    const blob = new Blob([backupJson], { type: "application/json" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `tracky-backup-${todayISO()}.json`;
+    a.click();
+  };
+  const copyBackupText = async () => {
+    try {
+      await navigator.clipboard.writeText(backupJson);
+      setImportMsg("In Zwischenablage kopiert.");
+    } catch {
+      setImportMsg("Kopieren automatisch nicht möglich – markiere den Text unten manuell und kopiere ihn per Hand.");
+    }
+  };
+  const handleImportFile = (file) => {
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try { onImportAll(JSON.parse(reader.result)); setImportMsg("Import erfolgreich."); } catch { setImportMsg("Datei konnte nicht gelesen werden."); }
+    };
+    reader.readAsText(file);
+  };
+  const importFromText = () => {
+    try { onImportAll(JSON.parse(importText)); setImportMsg("Import erfolgreich."); setImportText(""); }
+    catch { setImportMsg("Text ist kein gültiges Backup-JSON."); }
+  };
+
+  return (
+    <div className="ft-fade" style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+      <div className="ft-card">
+        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
+          <TrendingUp size={16} color={C.signal} />
+          <span className="ft-display" style={{ fontSize: 15, textTransform: "uppercase" }}>Trainingsvolumen · 8 Wochen</span>
+        </div>
+        <StackedBarChart data={weeklyData} series={Object.entries(DISCIPLINES).map(([key, d]) => ({ key, color: d.color, label: d.label }))} height={160} />
+      </div>
+
+      <div className="ft-card">
+        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
+          <Dumbbell size={16} color={C.signal} />
+          <span className="ft-display" style={{ fontSize: 15, textTransform: "uppercase" }}>Sätze pro Muskelgruppe · diese Woche</span>
+        </div>
+        <HBarChart data={muscleVolume.map((d) => ({ label: d.label, value: d.sets }))} color={C.signal} />
+        <span style={{ fontSize: 11, color: C.muted }}>Faustregel aus der Trainingswissenschaft: oft werden ca. 10–20 effektive Sätze/Woche pro Muskelgruppe für Muskelaufbau genannt – das ist aber individuell sehr unterschiedlich.</span>
+      </div>
+
+      <div className="ft-card">
+        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
+          <Scale size={16} color={C.signal} />
+          <span className="ft-display" style={{ fontSize: 15, textTransform: "uppercase" }}>Körpergewicht</span>
+        </div>
+        {weightData.length < 2 ? (
+          <div style={{ color: C.muted, fontSize: 13 }}>Trag mindestens zwei Körperwerte ein, um einen Trend zu sehen.</div>
+        ) : (
+          <LineChartSimple data={weightData} color={C.signal} />
+        )}
+      </div>
+
+      <div className="ft-card">
+        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
+          <Trophy size={16} color={C.signal} />
+          <span className="ft-display" style={{ fontSize: 15, textTransform: "uppercase" }}>Bestwerte</span>
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 10 }}>
+          {[
+            { label: "Längster Lauf", value: pr.run, unit: "km" },
+            { label: "Längstes Schwimmen", value: pr.swim, unit: "km" },
+            { label: "Schwerstes Gewicht", value: pr.gym, unit: "kg" },
+          ].map((s) => (
+            <div key={s.label} style={{ background: C.surface2, borderRadius: 8, padding: 10 }}>
+              <div className="ft-mono" style={{ fontSize: 18, color: C.signal }}>{s.value || "–"}{s.value ? <span style={{ fontSize: 11, color: C.muted }}> {s.unit}</span> : ""}</div>
+              <div style={{ fontSize: 10, color: C.muted, marginTop: 2 }}>{s.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="ft-card">
+        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
+          <TrendingUp size={16} color={C.signal} />
+          <span className="ft-display" style={{ fontSize: 15, textTransform: "uppercase" }}>Bestzeiten</span>
+        </div>
+        {["run", "swim"].map((disc) => (
+          <div key={disc} style={{ marginBottom: 10 }}>
+            <span style={{ fontSize: 11, color: C.muted, textTransform: "uppercase" }}>{DISCIPLINES[disc].label}</span>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8, marginTop: 6 }}>
+              {personalBests[disc].map((pb) => (
+                <div key={pb.distance} style={{ background: C.surface2, borderRadius: 8, padding: 8 }}>
+                  <div className="ft-mono" style={{ fontSize: 14, color: pb.best ? C.signal : C.muted }}>{pb.best ? `${pb.best}min` : "–"}</div>
+                  <div style={{ fontSize: 10, color: C.muted, marginTop: 2 }}>{pb.distance}km{pb.paceStr ? ` · ${pb.paceStr}` : ""}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+        <span style={{ fontSize: 11, color: C.muted }}>Einträge werden mit ±3% Toleranz der jeweiligen Standard-Distanz zugeordnet.</span>
+      </div>
+
+      <div className="ft-card">
+        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
+          <Waves size={16} color={C.signal} />
+          <span className="ft-display" style={{ fontSize: 15, textTransform: "uppercase" }}>Kilometer pro Technik</span>
+        </div>
+        <HBarChart data={swimTechniqueVolume.map((d) => ({ label: d.label, value: d.km }))} color={DISCIPLINES.swim.color} unit="km" />
+      </div>
+
+      {padelStats.length > 0 && (
+        <div className="ft-card">
+          <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
+            <PadelIcon size={16} color={C.signal} />
+            <span className="ft-display" style={{ fontSize: 15, textTransform: "uppercase" }}>Padel-Statistik</span>
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+            {padelStats.map((p) => (
+              <div key={p.name} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", background: C.surface2, borderRadius: 8, padding: "8px 10px" }}>
+                <span style={{ fontSize: 13 }}>{p.name} <span style={{ color: C.muted, fontSize: 11 }}>{p.partner > 0 ? "· Partner" : "· Gegner"}</span></span>
+                <span className="ft-mono" style={{ fontSize: 12, color: C.muted }}>
+                  {p.wins}S–{p.losses}N{p.training ? ` · ${p.training} Training` : ""}
+                  {p.winRate != null && <span style={{ color: C.signal }}> · {p.winRate}%</span>}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <div className="ft-card">
+        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
+          <Download size={16} color={C.signal} />
+          <span className="ft-display" style={{ fontSize: 15, textTransform: "uppercase" }}>Backup</span>
+        </div>
+        <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+          <button className="ft-btn-ghost" style={{ display: "flex", alignItems: "center", gap: 6 }} onClick={exportData}><Download size={13} /> Als Datei</button>
+          <button className="ft-btn-ghost" style={{ display: "flex", alignItems: "center", gap: 6 }} onClick={() => fileInputRef.current.click()}><Upload size={13} /> Datei importieren</button>
+          <button className="ft-btn-ghost" onClick={() => setShowBackupText((v) => !v)}>{showBackupText ? "Text verbergen" : "Als Text anzeigen"}</button>
+        </div>
+        <input ref={fileInputRef} type="file" accept="application/json" style={{ display: "none" }} onChange={(e) => handleImportFile(e.target.files[0])} />
+        <div style={{ fontSize: 10, color: C.muted, marginTop: 6 }}>Datei-Download funktioniert in manchen eingebetteten Ansichten nicht zuverlässig – falls "Als Datei" nichts sichtbares tut, nutze den Text darunter.</div>
+
+        {showBackupText && (
+          <div style={{ marginTop: 10, display: "flex", flexDirection: "column", gap: 6 }}>
+            <textarea readOnly value={backupJson} onFocus={(e) => e.target.select()} className="ft-input ft-mono" style={{ height: 120, fontSize: 10, resize: "vertical" }} />
+            <button className="ft-btn-ghost" style={{ alignSelf: "flex-start" }} onClick={copyBackupText}>In Zwischenablage kopieren</button>
+
+            <span style={{ fontSize: 12, color: C.muted, marginTop: 10 }}>Backup-Text zum Wiederherstellen einfügen:</span>
+            <textarea value={importText} onChange={(e) => setImportText(e.target.value)} placeholder="Backup-JSON hier einfügen…" className="ft-input ft-mono" style={{ height: 100, fontSize: 10, resize: "vertical" }} />
+            <button className="ft-btn" style={{ alignSelf: "flex-start", padding: "8px 14px" }} onClick={importFromText}>Aus Text importieren</button>
+          </div>
+        )}
+        {importMsg && <div style={{ fontSize: 11, color: C.signal, marginTop: 8 }}>{importMsg}</div>}
+      </div>
+    </div>
+  );
+}
+
+// ---------- Ernährung ----------
+function Nutrition({ foodEntries, foodLibrary, nutritionGoal, bodyStats, entries, onAddFoodEntry, onDeleteFoodEntry, onAddFoodLibItem, onUpdateFoodLibItem, onRemoveFoodLibItem, onUpdateGoal }) {
+  const [tab, setTab] = useState("heute");
+  const [showLibManage, setShowLibManage] = useState(false);
+  const [selectedFood, setSelectedFood] = useState("");
+  const [grams, setGrams] = useState("");
+  const [mealType, setMealType] = useState("fruehstueck");
+  const [newFood, setNewFood] = useState({ name: "", calories: "", protein: "", carbs: "", fat: "", fiber: "", colorTags: [] });
+  const [editingFoodName, setEditingFoodName] = useState(null);
+  const [editDraft, setEditDraft] = useState(null);
+  const [photoLoading, setPhotoLoading] = useState(false);
+  const [photoError, setPhotoError] = useState(null);
+  const [pendingPhotoFood, setPendingPhotoFood] = useState(null);
+  const [recipeLoading, setRecipeLoading] = useState(false);
+  const [recipeError, setRecipeError] = useState(null);
+  const [recipe, setRecipe] = useState(null);
+
+  const latestWeight = useMemo(() => {
+    const sorted = [...bodyStats].sort((a, b) => a.date.localeCompare(b.date));
+    return sorted.length ? sorted[sorted.length - 1].weight : 75;
+  }, [bodyStats]);
+
+  const weeklyHours = useMemo(() => getLastWeekTrainingHours(entries), [entries]);
+  const { adjustment, note: adjustmentNote } = useMemo(() => getWeeklyAdjustment(bodyStats, entries, nutritionGoal), [bodyStats, entries, nutritionGoal]);
+  const targets = useMemo(() => computeMacroTargets(latestWeight, weeklyHours, nutritionGoal, adjustment), [latestWeight, weeklyHours, nutritionGoal, adjustment]);
+
+  const todayEntries = foodEntries.filter((f) => f.date === todayISO());
+  const consumed = todayEntries.reduce((acc, f) => ({
+    calories: acc.calories + f.calories, protein: acc.protein + f.protein, carbs: acc.carbs + f.carbs, fat: acc.fat + f.fat, fiber: acc.fiber + f.fiber,
+  }), { calories: 0, protein: 0, carbs: 0, fat: 0, fiber: 0 });
+  const todayColors = new Set(todayEntries.flatMap((f) => f.colorTags || []));
+
+  const addLibItem = () => {
+    if (!newFood.name.trim()) return;
+    onAddFoodLibItem({
+      name: newFood.name.trim(), calories: Number(newFood.calories) || 0, protein: Number(newFood.protein) || 0,
+      carbs: Number(newFood.carbs) || 0, fat: Number(newFood.fat) || 0, fiber: Number(newFood.fiber) || 0, colorTags: newFood.colorTags,
+    });
+    setNewFood({ name: "", calories: "", protein: "", carbs: "", fat: "", fiber: "", colorTags: [] });
+  };
+  const toggleNewFoodColor = (c) => setNewFood((f) => ({ ...f, colorTags: f.colorTags.includes(c) ? f.colorTags.filter((x) => x !== c) : [...f.colorTags, c] }));
+  const startEditLib = (item) => { setEditingFoodName(item.name); setEditDraft({ ...item, calories: String(item.calories), protein: String(item.protein), carbs: String(item.carbs), fat: String(item.fat), fiber: String(item.fiber) }); };
+  const toggleEditColor = (c) => setEditDraft((d) => ({ ...d, colorTags: d.colorTags.includes(c) ? d.colorTags.filter((x) => x !== c) : [...d.colorTags, c] }));
+  const saveEditLib = () => {
+    onUpdateFoodLibItem(editingFoodName, { name: editDraft.name.trim(), calories: Number(editDraft.calories) || 0, protein: Number(editDraft.protein) || 0, carbs: Number(editDraft.carbs) || 0, fat: Number(editDraft.fat) || 0, fiber: Number(editDraft.fiber) || 0, colorTags: editDraft.colorTags });
+    setEditingFoodName(null); setEditDraft(null);
+  };
+
+  const submitFoodEntry = () => {
+    const item = foodLibrary.find((f) => f.name === selectedFood);
+    if (!item || !grams) return;
+    const factor = Number(grams) / 100;
+    onAddFoodEntry({
+      id: Date.now(), date: todayISO(), name: item.name, grams: Number(grams), mealType,
+      calories: Math.round(item.calories * factor), protein: Math.round(item.protein * factor),
+      carbs: Math.round(item.carbs * factor), fat: Math.round(item.fat * factor), fiber: Math.round(item.fiber * factor),
+      colorTags: item.colorTags || [], source: "manual",
+    });
+    setSelectedFood(""); setGrams("");
+  };
+
+  const handlePhotoFile = async (file) => {
+    if (!file) return;
+    setPhotoLoading(true); setPhotoError(null); setPendingPhotoFood(null);
+    try {
+      const base64 = await new Promise((resolve, reject) => {
+        const r = new FileReader();
+        r.onload = () => resolve(r.result.split(",")[1]);
+        r.onerror = reject;
+        r.readAsDataURL(file);
+      });
+      const prompt = `Analysiere das Foto einer Mahlzeit. Schätze Portionsgröße und Nährwerte für die gesamte sichtbare Portion (nicht pro 100g). Antworte NUR mit JSON, keine Erklärung, kein Markdown: {"name": "kurzer Name", "calories": number, "protein": number, "carbs": number, "fat": number, "fiber": number, "colorTags": ["Auswahl aus: Grün, Rot, Orange/Gelb, Blau/Violett, Weiß/Braun"]}`;
+      const result = await callClaudeJSON(prompt, base64);
+      setPendingPhotoFood({ name: result.name || "Foto-Schätzung", calories: Math.round(result.calories) || 0, protein: Math.round(result.protein) || 0, carbs: Math.round(result.carbs) || 0, fat: Math.round(result.fat) || 0, fiber: Math.round(result.fiber) || 0, colorTags: result.colorTags || [] });
+    } catch {
+      setPhotoError("Foto-Schätzung ist fehlgeschlagen (z.B. weil in dieser Umgebung kein Netzwerkzugriff möglich war). Trag die Mahlzeit gern manuell ein.");
+    } finally {
+      setPhotoLoading(false);
+    }
+  };
+  const confirmPhotoFood = () => {
+    if (!pendingPhotoFood) return;
+    onAddFoodEntry({ id: Date.now(), date: todayISO(), name: pendingPhotoFood.name, grams: null, mealType, ...pendingPhotoFood, source: "photo-ai" });
+    setPendingPhotoFood(null);
+  };
+
+  const generateRecipe = async () => {
+    setRecipeLoading(true); setRecipeError(null); setRecipe(null);
+    const remaining = { calories: Math.max(0, targets.calories - consumed.calories), protein: Math.max(0, targets.protein - consumed.protein), carbs: Math.max(0, targets.carbs - consumed.carbs), fat: Math.max(0, targets.fat - consumed.fat), fiber: Math.max(0, targets.fiber - consumed.fiber) };
+    const prompt = `Ich habe heute noch ca. ${remaining.calories} kcal, ${remaining.protein}g Protein, ${remaining.carbs}g Kohlenhydrate, ${remaining.fat}g Fett und ${remaining.fiber}g Ballaststoffe übrig. Mein Ziel: ${NUTRITION_GOALS[nutritionGoal]}. Ich möchte möglichst günstig, ballaststoffreich, mikronährstoffreich (bunt/vielfältig) und darmfreundlich essen. Schlage EIN einfaches, günstiges Rezept vor, das gut in dieses Budget passt. Antworte NUR mit JSON, keine Erklärung, kein Markdown: {"title": "...", "ingredients": ["..."], "steps": ["..."], "estCalories": number, "estProtein": number, "estCarbs": number, "estFat": number}`;
+    try {
+      const result = await callClaudeJSON(prompt);
+      setRecipe(result);
+    } catch {
+      setRecipeError("Rezeptvorschlag ist fehlgeschlagen (vermutlich kein Netzwerkzugriff in dieser Umgebung möglich).");
+    } finally {
+      setRecipeLoading(false);
+    }
+  };
+
+  const Bar = ({ label, value, target, unit }) => (
+    <div style={{ marginBottom: 8 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", fontSize: 11, color: C.muted, marginBottom: 3 }}>
+        <span>{label}</span>
+        <span className="ft-mono">{value}/{target}{unit}</span>
+      </div>
+      <div style={{ height: 6, background: C.surface2, borderRadius: 4, overflow: "hidden" }}>
+        <div style={{ height: "100%", width: `${Math.min(100, (value / target) * 100)}%`, background: value > target ? C.yellow : C.signal }} />
+      </div>
+    </div>
+  );
+
+  return (
+    <div className="ft-fade" style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+      <div style={{ display: "flex", gap: 4 }}>
+        {[["heute", "Heute"], ["verlauf", "Verlauf"], ["bibliothek", "Bibliothek"]].map(([k, l]) => (
+          <button key={k} className={`ft-tab ${tab === k ? "active" : ""}`} onClick={() => setTab(k)}><span className="dot" />{l}</button>
+        ))}
+      </div>
+
+      {tab === "heute" && (
+        <>
+          <div className="ft-card">
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
+              <span className="ft-display" style={{ fontSize: 15, textTransform: "uppercase" }}>Tagesziele</span>
+              <select className="ft-input" style={{ width: "auto", padding: "6px 8px", fontSize: 12 }} value={nutritionGoal} onChange={(e) => onUpdateGoal(e.target.value)}>
+                {Object.entries(NUTRITION_GOALS).map(([k, l]) => <option key={k} value={k}>{l}</option>)}
+              </select>
+            </div>
+            <Bar label="Kalorien" value={consumed.calories} target={targets.calories} unit="kcal" />
+            <Bar label="Protein" value={consumed.protein} target={targets.protein} unit="g" />
+            <Bar label="Kohlenhydrate" value={consumed.carbs} target={targets.carbs} unit="g" />
+            <Bar label="Fett" value={consumed.fat} target={targets.fat} unit="g" />
+            <Bar label="Ballaststoffe" value={consumed.fiber} target={targets.fiber} unit="g" />
+            {adjustmentNote && <div style={{ fontSize: 11, color: C.muted, marginTop: 6 }}>{adjustmentNote}</div>}
+            <div style={{ fontSize: 10, color: C.muted, marginTop: 8 }}>Grobe Schätzung aus Körpergewicht + Trainingsvolumen, kein medizinischer Rat.</div>
+          </div>
+
+          <div className="ft-card">
+            <span className="ft-display" style={{ fontSize: 13, textTransform: "uppercase" }}>Buntheit heute</span>
+            <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginTop: 8 }}>
+              {COLOR_TAGS.map((c) => (
+                <span key={c} className="btn-chip" style={{ borderRadius: 999, padding: "5px 10px", fontSize: 11, border: `1px solid ${todayColors.has(c) ? C.signal : C.border}`, color: todayColors.has(c) ? C.text : C.muted, background: todayColors.has(c) ? C.surface2 : "transparent" }}>{c}</span>
+              ))}
+            </div>
+            <div style={{ fontSize: 11, color: C.muted, marginTop: 6 }}>{todayColors.size}/5 Farbgruppen – Proxy für Mikronährstoff-Vielfalt statt exakter µg-Werte.</div>
+          </div>
+
+          <div className="ft-card" style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+            <span className="ft-display" style={{ fontSize: 13, textTransform: "uppercase" }}>Essen hinzufügen</span>
+            <div style={{ display: "flex", gap: 6 }}>
+              <select className="ft-input" style={{ flex: 2 }} value={selectedFood} onChange={(e) => setSelectedFood(e.target.value)}>
+                <option value="">Lebensmittel wählen</option>
+                {foodLibrary.map((f) => <option key={f.name} value={f.name}>{f.name}</option>)}
+              </select>
+              <input className="ft-input" style={{ flex: 1 }} placeholder="Gramm" type="number" value={grams} onChange={(e) => setGrams(e.target.value)} />
+            </div>
+            <select className="ft-input" value={mealType} onChange={(e) => setMealType(e.target.value)}>
+              {Object.entries(MEAL_TYPES).map(([k, l]) => <option key={k} value={k}>{l}</option>)}
+            </select>
+            <button className="ft-btn" onClick={submitFoodEntry}><Plus size={16} /> Eintragen</button>
+            {foodLibrary.length === 0 && <span style={{ fontSize: 12, color: C.muted }}>Noch keine Lebensmittel angelegt – unten in der Bibliothek hinzufügen.</span>}
+
+            <label className="ft-btn-ghost" style={{ display: "flex", alignItems: "center", gap: 8, justifyContent: "center", cursor: "pointer", marginTop: 4 }}>
+              {photoLoading ? <Loader2 size={14} className="ft-mono" /> : <Camera size={14} />}
+              {photoLoading ? "Schätze…" : "Foto von Mahlzeit"}
+              <input type="file" accept="image/*" capture="environment" style={{ display: "none" }} onChange={(e) => handlePhotoFile(e.target.files[0])} />
+            </label>
+            {photoError && <span style={{ fontSize: 11, color: C.signal }}>{photoError}</span>}
+            {pendingPhotoFood && (
+              <div className="ft-card" style={{ background: C.surface2 }}>
+                <div style={{ fontSize: 12, color: C.muted, marginBottom: 4 }}>KI-Schätzung, bitte prüfen:</div>
+                <div className="ft-mono" style={{ fontSize: 13 }}>{pendingPhotoFood.name}: {pendingPhotoFood.calories}kcal · {pendingPhotoFood.protein}g P · {pendingPhotoFood.carbs}g KH · {pendingPhotoFood.fat}g F · {pendingPhotoFood.fiber}g Ballaststoffe</div>
+                <div style={{ display: "flex", gap: 8, marginTop: 8 }}>
+                  <button className="ft-btn" style={{ padding: "8px 12px" }} onClick={confirmPhotoFood}>Übernehmen</button>
+                  <button className="ft-btn-ghost" onClick={() => setPendingPhotoFood(null)}>Verwerfen</button>
+                </div>
+              </div>
+            )}
+          </div>
+
+          <div className="ft-card" style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <span className="ft-display" style={{ fontSize: 13, textTransform: "uppercase" }}>Rezept-Idee</span>
+              <button className="ft-btn-ghost" style={{ display: "flex", alignItems: "center", gap: 6 }} onClick={generateRecipe} disabled={recipeLoading}>
+                {recipeLoading ? <Loader2 size={13} /> : <Sparkles size={13} />} Vorschlag
+              </button>
+            </div>
+            {recipeError && <span style={{ fontSize: 11, color: C.signal }}>{recipeError}</span>}
+            {recipe && (
+              <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+                <span style={{ fontWeight: 700, fontSize: 14 }}>{recipe.title}</span>
+                <span className="ft-mono" style={{ fontSize: 11, color: C.muted }}>~{recipe.estCalories}kcal · {recipe.estProtein}g P · {recipe.estCarbs}g KH · {recipe.estFat}g F</span>
+                <ul style={{ margin: "4px 0", paddingLeft: 18, fontSize: 12, color: C.text }}>
+                  {(recipe.ingredients || []).map((i, idx) => <li key={idx}>{i}</li>)}
+                </ul>
+                <ol style={{ margin: 0, paddingLeft: 18, fontSize: 12, color: C.muted }}>
+                  {(recipe.steps || []).map((s, idx) => <li key={idx}>{s}</li>)}
+                </ol>
+              </div>
+            )}
+          </div>
+
+          {todayEntries.length > 0 && (
+            <div className="ft-card">
+              <span className="ft-display" style={{ fontSize: 13, textTransform: "uppercase" }}>Heute gegessen</span>
+              <div style={{ display: "flex", flexDirection: "column", gap: 6, marginTop: 8 }}>
+                {todayEntries.map((f) => (
+                  <div key={f.id} style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                    <span style={{ fontSize: 12 }}>{f.name}{f.grams ? ` (${f.grams}g)` : ""} <span style={{ color: C.muted }}>· {MEAL_TYPES[f.mealType]}</span></span>
+                    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                      <span className="ft-mono" style={{ fontSize: 11, color: C.muted }}>{f.calories}kcal</span>
+                      <X size={13} style={{ cursor: "pointer", color: C.muted }} onClick={() => onDeleteFoodEntry(f.id)} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </>
+      )}
+
+      {tab === "verlauf" && (
+        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+          {foodEntries.length === 0 ? (
+            <div className="ft-card empty" style={{ textAlign: "center", color: C.muted, fontSize: 13 }}>Noch keine Einträge.</div>
+          ) : (
+            [...foodEntries].sort((a, b) => b.date.localeCompare(a.date) || b.id - a.id).map((f) => (
+              <div key={f.id} className="ft-card" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <div>
+                  <div style={{ fontSize: 13 }}>{f.name}{f.grams ? ` (${f.grams}g)` : ""}</div>
+                  <div className="ft-mono" style={{ fontSize: 11, color: C.muted }}>{fmtDate(f.date)} · {MEAL_TYPES[f.mealType]} · {f.calories}kcal · {f.protein}g P · {f.carbs}g KH · {f.fat}g F</div>
+                </div>
+                <X size={14} style={{ cursor: "pointer", color: C.muted, flexShrink: 0 }} onClick={() => onDeleteFoodEntry(f.id)} />
+              </div>
+            ))
+          )}
+        </div>
+      )}
+
+      {tab === "bibliothek" && (
+        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+          <div className="ft-card" style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+            <span style={{ fontSize: 12, color: C.muted }}>Neues Lebensmittel (Werte pro 100g)</span>
+            <input className="ft-input" placeholder="Name" value={newFood.name} onChange={(e) => setNewFood({ ...newFood, name: e.target.value })} />
+            <div style={{ display: "flex", gap: 6 }}>
+              <input className="ft-input" placeholder="kcal" type="number" value={newFood.calories} onChange={(e) => setNewFood({ ...newFood, calories: e.target.value })} />
+              <input className="ft-input" placeholder="Protein g" type="number" value={newFood.protein} onChange={(e) => setNewFood({ ...newFood, protein: e.target.value })} />
+              <input className="ft-input" placeholder="KH g" type="number" value={newFood.carbs} onChange={(e) => setNewFood({ ...newFood, carbs: e.target.value })} />
+            </div>
+            <div style={{ display: "flex", gap: 6 }}>
+              <input className="ft-input" placeholder="Fett g" type="number" value={newFood.fat} onChange={(e) => setNewFood({ ...newFood, fat: e.target.value })} />
+              <input className="ft-input" placeholder="Ballaststoffe g" type="number" value={newFood.fiber} onChange={(e) => setNewFood({ ...newFood, fiber: e.target.value })} />
+            </div>
+            <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+              {COLOR_TAGS.map((c) => (
+                <button key={c} className={`ft-btn-ghost ${newFood.colorTags.includes(c) ? "on" : ""}`} style={{ padding: "4px 10px", fontSize: 11 }} onClick={() => toggleNewFoodColor(c)}>{c}</button>
+              ))}
+            </div>
+            <button className="ft-btn" onClick={addLibItem}><Plus size={14} /> Hinzufügen</button>
+          </div>
+
+          {foodLibrary.map((item) => (
+            editingFoodName === item.name ? (
+              <div key={item.name} className="ft-card" style={{ background: C.surface2, display: "flex", flexDirection: "column", gap: 6 }}>
+                <input className="ft-input" value={editDraft.name} onChange={(e) => setEditDraft({ ...editDraft, name: e.target.value })} />
+                <div style={{ display: "flex", gap: 6 }}>
+                  <input className="ft-input" placeholder="kcal" type="number" value={editDraft.calories} onChange={(e) => setEditDraft({ ...editDraft, calories: e.target.value })} />
+                  <input className="ft-input" placeholder="Protein" type="number" value={editDraft.protein} onChange={(e) => setEditDraft({ ...editDraft, protein: e.target.value })} />
+                  <input className="ft-input" placeholder="KH" type="number" value={editDraft.carbs} onChange={(e) => setEditDraft({ ...editDraft, carbs: e.target.value })} />
+                </div>
+                <div style={{ display: "flex", gap: 6 }}>
+                  <input className="ft-input" placeholder="Fett" type="number" value={editDraft.fat} onChange={(e) => setEditDraft({ ...editDraft, fat: e.target.value })} />
+                  <input className="ft-input" placeholder="Ballaststoffe" type="number" value={editDraft.fiber} onChange={(e) => setEditDraft({ ...editDraft, fiber: e.target.value })} />
+                </div>
+                <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                  {COLOR_TAGS.map((c) => (
+                    <button key={c} className={`ft-btn-ghost ${editDraft.colorTags.includes(c) ? "on" : ""}`} style={{ padding: "4px 10px", fontSize: 11 }} onClick={() => toggleEditColor(c)}>{c}</button>
+                  ))}
+                </div>
+                <div style={{ display: "flex", gap: 8 }}>
+                  <button className="ft-btn" style={{ padding: "8px 12px" }} onClick={saveEditLib}><Check size={14} /></button>
+                  <button className="ft-btn-ghost" onClick={() => setEditingFoodName(null)}><X size={14} /></button>
+                </div>
+              </div>
+            ) : (
+              <div key={item.name} className="ft-card" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <div>
+                  <div style={{ fontSize: 13 }}>{item.name}</div>
+                  <div className="ft-mono" style={{ fontSize: 11, color: C.muted }}>{item.calories}kcal · {item.protein}g P · {item.carbs}g KH · {item.fat}g F · {item.fiber}g Ballast./100g</div>
+                </div>
+                <div style={{ display: "flex", gap: 8 }}>
+                  <Pencil size={13} style={{ cursor: "pointer", color: C.muted }} onClick={() => startEditLib(item)} />
+                  <X size={14} style={{ cursor: "pointer", color: C.muted }} onClick={() => onRemoveFoodLibItem(item.name)} />
+                </div>
+              </div>
+            )
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ---------- app ----------
+function App() {
+  const [entries, setEntries] = useState([]);
+  const [bodyStats, setBodyStats] = useState([]);
+  const [goal, setGoal] = useState(null);
+  const [exerciseLibrary, setExerciseLibrary] = useState([]);
+  const [playerLibrary, setPlayerLibrary] = useState([]);
+  const [foodEntries, setFoodEntries] = useState([]);
+  const [foodLibrary, setFoodLibrary] = useState([]);
+  const [nutritionGoal, setNutritionGoal] = useState("erhalt");
+  const [view, setView] = useState("log");
+  const [loading, setLoading] = useState(true);
+  const [editingEntry, setEditingEntry] = useState(null);
+  const [storageCheck, setStorageCheck] = useState(null);
+  const [bannerDismissed, setBannerDismissed] = useState(false);
+
+  const runStorageCheck = async () => setStorageCheck(await testStoragePersistence());
+
+  useEffect(() => {
+    (async () => {
+      const [e, b, g, lib, players, foodE, foodLib, nutGoal, check] = await Promise.all([
+        loadKey("entries", []),
+        loadKey("bodystats", []),
+        loadKey("goal", null),
+        loadKey("exercise-library", []),
+        loadKey("player-library", []),
+        loadKey("food-entries", []),
+        loadKey("food-library", []),
+        loadKey("nutrition-goal", "erhalt"),
+        testStoragePersistence(),
+      ]);
+      // Altes Format (reine Namensliste) auf {name, muscleGroup, repLow, repHigh} migrieren
+      const migratedLib = (lib || []).length === 0 ? SEED_EXERCISES : (lib || []).map((item) => (typeof item === "string" ? { name: item, muscleGroup: "", repLow: 6, repHigh: 8 } : item));
+      setEntries(e); setBodyStats(b); setGoal(g); setExerciseLibrary(migratedLib); setPlayerLibrary(players || []);
+      setFoodEntries(foodE || []); setFoodLibrary(foodLib || []); setNutritionGoal(nutGoal || "erhalt");
+      setStorageCheck(check);
+      if (JSON.stringify(migratedLib) !== JSON.stringify(lib)) saveKey("exercise-library", migratedLib);
+      setLoading(false);
+    })();
+  }, []);
+
+  const addEntry = (entry) => { const next = [...entries, entry]; setEntries(next); saveKey("entries", next); };
+  const updateEntry = (entry) => { const next = entries.map((e) => (e.id === entry.id ? entry : e)); setEntries(next); saveKey("entries", next); setEditingEntry(null); setView("history"); };
+  const deleteEntry = (id) => { const next = entries.filter((e) => e.id !== id); setEntries(next); saveKey("entries", next); };
+  const addBodyStat = (stat) => { const next = [...bodyStats, stat]; setBodyStats(next); saveKey("bodystats", next); };
+  const updateGoal = (g) => { setGoal(g); saveKey("goal", g); };
+  const startEdit = (entry) => { setEditingEntry(entry); setView("log"); };
+  const cancelEdit = () => setEditingEntry(null);
+
+  const addPlayer = (name) => {
+    if (!name.trim() || playerLibrary.includes(name)) return;
+    const next = [...playerLibrary, name];
+    setPlayerLibrary(next); saveKey("player-library", next);
+  };
+  const removePlayer = (name) => {
+    const next = playerLibrary.filter((n) => n !== name);
+    setPlayerLibrary(next); saveKey("player-library", next);
+  };
+
+  const addFoodEntry = (entry) => { const next = [...foodEntries, entry]; setFoodEntries(next); saveKey("food-entries", next); };
+  const deleteFoodEntry = (id) => { const next = foodEntries.filter((f) => f.id !== id); setFoodEntries(next); saveKey("food-entries", next); };
+  const addFoodLibItem = (item) => {
+    if (foodLibrary.some((f) => f.name === item.name)) return;
+    const next = [...foodLibrary, item]; setFoodLibrary(next); saveKey("food-library", next);
+  };
+  const removeFoodLibItem = (name) => { const next = foodLibrary.filter((f) => f.name !== name); setFoodLibrary(next); saveKey("food-library", next); };
+  const updateFoodLibItem = (oldName, newItem) => {
+    const next = foodLibrary.map((f) => (f.name === oldName ? newItem : f));
+    setFoodLibrary(next); saveKey("food-library", next);
+  };
+  const updateNutritionGoal = (g) => { setNutritionGoal(g); saveKey("nutrition-goal", g); };
+
+  const addLibraryItem = (item) => {
+    if (!item.name.trim() || exerciseLibrary.some((l) => l.name === item.name)) return;
+    const next = [...exerciseLibrary, item];
+    setExerciseLibrary(next); saveKey("exercise-library", next);
+  };
+  const removeLibraryItem = (name) => {
+    const next = exerciseLibrary.filter((l) => l.name !== name);
+    setExerciseLibrary(next); saveKey("exercise-library", next);
+  };
+  // Umbenennen/Ändern einer Übung: wirkt auch auf bereits gespeicherte Einträge, damit
+  // Verlauf und Progressionsvorschlag weiter zusammenpassen.
+  const updateLibraryItem = (oldName, newItem) => {
+    const next = exerciseLibrary.map((l) => (l.name === oldName ? newItem : l));
+    setExerciseLibrary(next); saveKey("exercise-library", next);
+    if (newItem.name !== oldName) {
+      const newEntries = entries.map((e) => e.discipline === "gym"
+        ? { ...e, exercises: (e.exercises || []).map((ex) => (ex.name === oldName ? { ...ex, name: newItem.name } : ex)) }
+        : e);
+      setEntries(newEntries); saveKey("entries", newEntries);
+    }
+  };
+
+  const importAll = (data) => {
+    const e = data.entries || [], b = data.bodyStats || [], g = data.goal || null, lib = data.library || [];
+    setEntries(e); setBodyStats(b); setGoal(g); setExerciseLibrary(lib);
+    saveKey("entries", e); saveKey("bodystats", b); saveKey("goal", g); saveKey("exercise-library", lib);
+  };
+
+  const views = [
+    { key: "log", label: "Eintragen", icon: Plus },
+    { key: "history", label: "Verlauf", icon: ListChecks },
+    { key: "progress", label: "Fortschritt", icon: Flame },
+    { key: "nutrition", label: "Ernährung", icon: Apple },
+  ];
+
+  if (loading) {
+    return (
+      <div className="ft-root" style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100vh" }}>
+        <GlobalStyle />
+        <span className="ft-mono" style={{ color: C.muted }}>Lade…</span>
+      </div>
+    );
+  }
+
+  return (
+    <div className="ft-root">
+      <GlobalStyle />
+      <div style={{ maxWidth: 640, margin: "0 auto", padding: "20px 16px 90px", display: "flex", flexDirection: "column", gap: 18 }}>
+        <div>
+          <div className="ft-display" style={{ fontSize: 30, lineHeight: 1 }}>TRACK<span style={{ color: C.signal }}>Y</span></div>
+          <div style={{ fontSize: 12, color: C.muted, marginTop: 2 }}>Gym · Laufen · Schwimmen · Padel</div>
+        </div>
+
+        {storageCheck && !storageCheck.ok && !bannerDismissed && (
+          <div style={{ display: "flex", alignItems: "center", gap: 8, background: C.surface2, border: `1px solid ${C.red}`, borderRadius: 10, padding: "8px 10px", fontSize: 11.5 }}>
+            <span style={{ color: C.red, flexShrink: 0 }}>⚠️</span>
+            <span style={{ flex: 1, color: C.muted }}>
+              Speicher gestört – Eingaben evtl. nicht gespeichert. <span style={{ color: C.text, textDecoration: "underline", cursor: "pointer" }} onClick={runStorageCheck}>Erneut prüfen</span>
+            </span>
+            <X size={14} style={{ cursor: "pointer", color: C.muted, flexShrink: 0 }} onClick={() => setBannerDismissed(true)} />
+          </div>
+        )}
+
+        <Ticker entries={entries} bodyStats={bodyStats} goal={goal} onEditGoal={updateGoal} />
+
+        {view === "log" && (
+          <LogForm
+            onAddEntry={addEntry} onUpdateEntry={updateEntry} onAddBodyStat={addBodyStat}
+            entries={entries} library={exerciseLibrary}
+            onAddLibraryItem={addLibraryItem} onUpdateLibraryItem={updateLibraryItem} onRemoveLibraryItem={removeLibraryItem}
+            playerLibrary={playerLibrary} onAddPlayer={addPlayer} onRemovePlayer={removePlayer}
+            editingEntry={editingEntry} onCancelEdit={cancelEdit} goal={goal}
+          />
+        )}
+        {view === "history" && <History entries={entries} onDelete={deleteEntry} onEdit={startEdit} />}
+        {view === "progress" && <Progress entries={entries} bodyStats={bodyStats} library={exerciseLibrary} goal={goal} onImportAll={importAll} />}
+        {view === "nutrition" && (
+          <Nutrition
+            foodEntries={foodEntries} foodLibrary={foodLibrary} nutritionGoal={nutritionGoal} bodyStats={bodyStats} entries={entries}
+            onAddFoodEntry={addFoodEntry} onDeleteFoodEntry={deleteFoodEntry}
+            onAddFoodLibItem={addFoodLibItem} onUpdateFoodLibItem={updateFoodLibItem} onRemoveFoodLibItem={removeFoodLibItem}
+            onUpdateGoal={updateNutritionGoal}
+          />
+        )}
+      </div>
+
+      <div style={{ position: "fixed", bottom: 0, left: 0, right: 0, background: C.surface, borderTop: `1px solid ${C.border}`, display: "flex", padding: "6px 10px", maxWidth: 640, margin: "0 auto" }}>
+        {views.map((v) => {
+          const Icon = v.icon;
+          const active = view === v.key;
+          return (
+            <button key={v.key} className={`ft-tab ${active ? "active" : ""}`} onClick={() => setView(v.key)}>
+              <Icon size={18} color={active ? C.signal : C.muted} />
+              {v.label}
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+const __root = ReactDOM.createRoot(document.getElementById("root"));
+__root.render(<App />);
+
+  </script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () { navigator.serviceWorker.register("sw.js").catch(function () {}); });
+    }
+  </script>
+</body>
+</html>
